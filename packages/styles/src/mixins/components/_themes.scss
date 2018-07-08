@@ -1,0 +1,16 @@
+/**
+ * Mixin to add styles based on themeId
+ *
+ * @param {map} $containers Containers
+ * @param {Number?} $gutter Gutter between grid columns
+ */
+
+@mixin color-theme($themeId) {
+	@if $themeId == 0 {
+		@content;
+	} @else {
+		.color-theme-#{$themeId} & {
+			@content;
+		}
+	}
+}

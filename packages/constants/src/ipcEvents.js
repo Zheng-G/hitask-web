@@ -1,0 +1,17 @@
+export const APP_UPDATER_READY = 'APP_UPDATER_READY';
+
+export const APP_UPDATE_READY = 'APP_UPDATE_READY';
+
+export const APP_UPDATE_CONFIRM = 'APP_UPDATE_CONFIRM';
+
+export const GOAUTH_REQUEST = 'GOAUTH_REQUEST';
+
+export const GOAUTH_REPLY = 'GOAUTH_REPLY';
+
+export const SET_BADGE_COUNT = 'SET_BADGE_COUNT';
+
+export const TRACK_USER = 'TRACK_USER';
+
+export const GET_LOCAL_SESSION = 'GET_LOCAL_SESSION';
+
+export const SET_LOCAL_SESSION = 'SET_LOCAL_SESSION';

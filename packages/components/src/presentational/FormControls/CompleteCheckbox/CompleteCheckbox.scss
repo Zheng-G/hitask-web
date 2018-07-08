@@ -1,0 +1,44 @@
+@import 'imports';
+
+$icon-width: 1.6rem;
+$icon-height: $icon-width;
+
+.wrapper {
+	position: relative;
+	width: $icon-width;
+	height: $icon-height;
+	line-height: $icon-height;
+	padding: 0;
+	background: $white;
+	border-radius: $pt-border-radius + 1px;
+}
+
+.inputHidden {
+	background: $white;
+	border-radius: $pt-border-radius;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+
+	&:global(.disabled) {
+		cursor: not-allowed;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+}
+
+.icon {
+	width: $icon-width;
+	height: $icon-height;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+
+	&:global(.disabled) {
+		position: relative;
+	}
+}

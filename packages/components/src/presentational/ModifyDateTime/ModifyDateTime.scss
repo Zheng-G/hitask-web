@@ -1,0 +1,17 @@
+@import 'imports';
+
+.modifyDateTime {
+	width: 100%;
+}
+
+a.filledSummary {
+	text-decoration: underline;
+
+	@include color-theme(0) {
+		color: $hi-black;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

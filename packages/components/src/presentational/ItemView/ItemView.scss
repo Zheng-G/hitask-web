@@ -1,0 +1,103 @@
+@import '../Item/Item';
+
+$item-view-background: $white;
+
+.view {
+	position: relative;
+	overflow: auto;
+	padding: 0 0 0.5rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include color-theme(0) {
+		background: $item-view-background;
+	}
+}
+
+.propertiesWrapper {
+	position: relative;
+	padding-bottom: 3rem;
+	min-height: 6rem;
+	transition: min-height $expand-collapse-duration $pt-transition-ease;
+
+	&.historyExpanded {
+		min-height: 27rem;
+	}
+}
+
+.actionsRow {
+	display: flex;
+	padding: 1.4rem $properties-side-offset $properties-side-offset;
+
+	@include color-theme(0) {
+		background-color: $hi-white6;
+	}
+
+	> :global(.pt-button),
+	> :global(.pt-popover-target) {
+		margin-left: $horizontal-offset;
+	}
+}
+
+.propRow {
+	@include item-properties-row;
+}
+
+.permissionsContent {
+	font-size: 1.2rem;
+	color: $hi-gray7;
+}
+
+.propLabel {
+	opacity: 0.7;
+}
+
+.propContent {
+	flex-grow: 2;
+	display: flex;
+	flex-wrap: wrap;
+
+	&.verticalSpacing {
+		margin-bottom: -0.5rem;
+
+		.propListUnit {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+.propLabel,
+.propListUnit {
+	margin-right: 0.5rem;
+}
+
+.lastUpdateLabel {
+	flex-grow: 2;
+	display: flex;
+	align-items: center;
+}
+
+.itemDescription {
+	max-height: 13rem;
+	overflow: auto;
+	align-items: flex-start;
+
+	@include media-breakpoint(md-up) {
+		max-height: 14.4rem;
+	}
+}
+
+.deletePopoverContent {
+	display: flex;
+	flex-direction: column;
+}
+
+.deletePopoverButton {
+	margin-top: 1rem;
+	margin-right: 1rem;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}

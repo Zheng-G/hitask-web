@@ -1,0 +1,143 @@
+/**
+ * Webapp Colors
+ * https://hitask.red/projects/hitask-documentation/wiki/Style_Guide
+ */
+
+// TODO: integrate with blueprint colors
+
+$hi-blue1: #3875a4;
+$hi-blue2: #27a8c5;
+$hi-blue3: #16a4fa;
+$hi-blue4: #50a6db;
+$hi-blue5: #137cbd;
+
+$hi-red1: #de4444;
+$hi-red2: #fe424d;
+$hi-red3: #e85379;
+$hi-red4: #d9534f;
+$hi-red5: #d8354c;
+
+$hi-orange1: #df8d37;
+
+$hi-yellow1: #ebbb2b;
+
+$hi-green1: #3eb365;
+$hi-green2: #11a58b;
+$hi-green3: #5cb85c;
+
+$hi-purple1: #a36bb2;
+$hi-purple2: #d388e3;
+
+$hi-brown1: #9f7642;
+
+$hi-turquoise1: #03d2c2;
+
+$hi-pink1: #ffebec;
+$hi-pink2: #f7d1d3;
+$hi-pink3: #ffeced;
+
+/**
+ * Gray scale
+ */
+
+$hi-black: #000000;
+$hi-black1: #202020;
+$hi-black2: #1b2038;
+$hi-black3: #182026;
+
+$hi-dark-gray1: #3d445d;
+$hi-dark-gray2: #3d445e;
+$hi-dark-gray3: #3d4148;
+$hi-dark-gray4: #4a4a4a;
+
+$hi-gray1: #a2b8c8;
+$hi-gray2: #aebec8;
+$hi-gray3: #bcc0c7;
+$hi-gray4: #c4d2da;
+$hi-gray5: #9299ad;
+$hi-gray6: #cfdbe4;
+$hi-gray7: #a1b8c8;
+$hi-gray8: #7a8090;
+$hi-gray9: #b9cedd;
+$hi-gray10: rgba(141, 141, 141, 0.2);
+$hi-gray11: #8d8d8d;
+$hi-gray12: #9b9b9b;
+$hi-gray13: #727272;
+$hi-gray14: #d2dee9;
+$hi-gray15: #e4f0f9;
+$hi-gray16: #9298b0;
+$hi-gray17: #8f9dd4;
+$hi-gray18: #a1a6b0;
+$hi-gray19: #90a0ad;
+$hi-gray20: #91a9bb;
+
+$hi-light-gray1: #e1e6ea;
+$hi-light-gray2: #dde2e6;
+$hi-light-gray3: #e1ebf2;
+$hi-light-gray4: #f7f7f7;
+$hi-light-gray5: #e7ecef;
+$hi-light-gray6: #dde2e3;
+$hi-light-gray7: #efefef;
+$hi-light-gray8: #eeeeee;
+$hi-light-gray9: #f3f4f8;
+$hi-light-gray10: #f4f4f4;
+$hi-light-gray11: #c5c5c5;
+
+$hi-white: #ffffff;
+$hi-white1: #f0f4f7;
+$hi-white2: #f5f6f7;
+$hi-white3: #f8f9fa;
+$hi-white4: #f6f6f6;
+$hi-white5: #fffff5;
+$hi-white6: #f7f9fa;
+$hi-white7: #f2f2f2;
+$hi-white8: #fafafa;
+
+/**
+ * Webapp Colors
+ *
+ * @param {color} $color-primary    Primary color
+ * @param {color} $color-secondary  Secondary color
+ * @param {color} $color-background Background color
+ * @param {color} $color-line       Line color
+ *
+ * @param {color} $color-text       Text color
+ * @param {color} $color-heading    Heading color
+ * @param {color} $color-code       Code color
+ *
+ * @param {color} $color-success    Success color
+ * @param {color} $color-error      Error color
+ */
+
+$color-primary: $hi-blue3;
+$color-brand: $hi-red2;
+$color-secondary: $color-brand;
+$color-tertiary: $hi-turquoise1;
+$color-complementary: $hi-gray5;
+$color-complementary-light: $hi-gray6;
+$color-background: $hi-white8;
+$color-background-silver: $hi-white4;
+$color-background-dark: $hi-dark-gray2;
+$color-background-white: $hi-white;
+$color-background-light: $hi-white1;
+$color-line: $pt-control-inactive;
+$color-line-gray: $hi-gray10;
+$color-line-light: $hi-light-gray1; // $hi-light-gray8;
+$color-shadow: $hi-black2;
+
+$color-text: $hi-gray8; /* brand graphite: $dark-gray3; */
+$color-text-lead: $hi-light-gray6;
+$color-text-light: $color-complementary;
+$color-text-inverted: $hi-gray9;
+$color-text-item: $hi-black1;
+
+$color-heading: $hi-dark-gray3;
+$color-heading-inverted: $hi-white;
+
+$color-link: $hi-blue1;
+$color-link-inverted: $hi-gray7;
+$color-code: $color-text;
+
+$color-success: $hi-green3;
+$color-error: $hi-red4;
+$color-error-background: $hi-pink1;

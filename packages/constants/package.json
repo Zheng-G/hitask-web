@@ -1,0 +1,23 @@
+{
+  "name": "@hitask/constants",
+  "version": "0.1.30",
+  "private": true,
+  "description": "Global reusable constants",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "npm-run-all -p lint:eslint",
+    "lint:eslint": "eslint ."
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.13"
+  },
+  "devDependencies": {
+    "@hitask/test": "^0.1.2"
+  }
+}

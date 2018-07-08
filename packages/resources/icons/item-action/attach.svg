@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>item action / icon/ attach</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="item-action-/-icon/-attach" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="attach-87" transform="translate(8.000000, 7.000000)" stroke="#4A4A4A">
+            <path d="M7.857,5.357 L4.852,8.362 C4.169,9.045 4.169,10.153 4.852,10.837 C5.535,11.52 6.643,11.52 7.327,10.837 L11.393,6.771 C12.76,5.404 12.76,3.188 11.393,1.821 C10.026,0.454 7.81,0.454 6.443,1.821 L2.024,6.241 C-0.026,8.291 -0.026,11.615 2.024,13.666 C4.074,15.716 7.398,15.716 9.449,13.666 L13.514,9.6" id="Shape"></path>
+        </g>
+    </g>
+</svg>

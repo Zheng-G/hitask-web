@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+/* eslint no-unused-expressions:0 strict:0 */
+
+'use strict';
+
+const yargs = require('yargs');
+const shell = require('shelljs');
+const compileProps2Json = require('./compileProps2Json');
+const { checkRelativePath, checkFolderExists } = require('./helpers');
+
+
+yargs.command(
+	'compile',
+	'Compile translation files from java properties to JSON', {
+		src: {
+			alias: 's',
+			describe: 'path to folder with source locales directories',
+		},
+		dist: {
+			alias: 'd',
+			describe: 'path to folder where compiled files will be placed',
+		},
+		default: {
+			alias: 'f',
+			default: 'en',
+			describe: 'default locale',
+		},
+	}, (argv) => {
+		const args = checkRelativePath(argv, ['src', 's', 'dist', 'd']);
+		if (!checkFolderExists(args.src)) {
+			throw new Error(`Folder ${args.src} does not exist`);
+		}
+		if (!checkFolderExists(args.dist)) {
+			shell.mkdir('-p', args.dist);
+		}
+		compileProps2Json(args);
+	}
+)
+	.demandOption(['src', 'dist'], 'Please provide both src and dist arguments')
+	.argv;

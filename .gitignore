@@ -1,0 +1,43 @@
+# macOS
+.DS_STORE
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Yarn
+.yarn
+
+# Node
+node_modules
+package-lock.json
+*.log
+
+# Environment
+.env
+
+# Sass
+.sass-cache/
+
+# Hitask
+coverage
+dist/*
+.hidden
+
+# JavaScript Studio
+.studio
+
+# Webpack
+*.hot-update.js
+*.hot-update.json
+
+# Bugsnag
+bugsnag-sourcemap*
+
+# JSDoc
+docs
+
+# Puppeteer
+screenshots/**

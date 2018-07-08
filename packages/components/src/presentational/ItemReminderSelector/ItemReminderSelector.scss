@@ -1,0 +1,25 @@
+@import 'imports';
+
+$side-margin: 0.5rem;
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -$side-margin;
+}
+
+.alert,
+.button {
+	display: inline-block;
+	margin-right: $side-margin;
+	margin-bottom: $side-margin;
+}
+
+.button {
+	padding: 0 1.2rem;
+}
+
+.buttonLink {
+	line-height: $pt-button-height;
+	user-select: none;
+}

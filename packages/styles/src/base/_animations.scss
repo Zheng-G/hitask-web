@@ -1,0 +1,24 @@
+$transition-duration: 500ms;
+$transition-ease: ease-out;
+
+.fadeOutUp-leave {
+	opacity: 1;
+	transition: opacity $transition-duration $transition-ease,
+		transform $transition-duration $transition-ease;
+}
+
+.fadeOutUp-leave.fadeOutUp-leave-active {
+	opacity: 0;
+	transform: translate3d(0, -100%, 0);
+}
+
+.fadeOutDown-leave {
+	opacity: 1;
+	transition: opacity $transition-duration $transition-ease,
+		transform $transition-duration $transition-ease;
+}
+
+.fadeOutDown-leave.fadeOutDown-leave-active {
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+}

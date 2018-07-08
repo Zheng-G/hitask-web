@@ -1,0 +1,9 @@
+{
+  "name": "@hitask/webapp-build",
+  "buildId": "1676-dd087f97",
+  "author": "Human Computer LLC",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "DEBUG=webapp:* node app"
+  }
+}

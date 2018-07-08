@@ -1,0 +1,12 @@
+/**
+ * Image rendering quality
+ * In Chrome background image quality is not the best when using background-size
+ */
+
+@mixin image-rendering($mode) {
+	@if $mode == crisp-edges {
+		image-rendering: -moz-crisp-edges; // Firefox
+		image-rendering: -webkit-optimize-contrast; // Webkit (non-standard naming)
+		image-rendering: crisp-edges; // Standard naming
+	}
+}

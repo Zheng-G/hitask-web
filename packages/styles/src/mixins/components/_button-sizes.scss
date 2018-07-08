@@ -1,0 +1,26 @@
+/*
+ * Button size
+ *
+ * Sets different size for different breakpoints
+ */
+
+@mixin button-sizes($button) {
+	@each $breakpoint, $size in $button {
+		@include media-breakpoint('#{$breakpoint}-up') {
+			// Normal styles
+			@each $name, $value in $size {
+				#{$name}: #{$value};
+			}
+
+			// Icon
+			// &.btn__icon {
+			//     width: map-get($size, height);
+			// }
+
+			// Line height
+			@if not map-has-key($size, 'line-height') {
+				line-height: map-get($size, height);
+			}
+		}
+	}
+}

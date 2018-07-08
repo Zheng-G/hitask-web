@@ -1,0 +1,9 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Item-View-/-comment-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="comment-icon" stroke="#4A4A4A">
+            <path d="M14.5,0.533333333 L1.5,0.533333333 C0.94771525,0.533333333 0.5,1.01089627 0.5,1.6 L0.5,10.1333333 C0.5,10.7224371 0.94771525,11.2 1.5,11.2 L4.5,11.2 L4.5,15.4666667 L9.167,11.2 L14.5,11.2 C15.0522847,11.2 15.5,10.7224371 15.5,10.1333333 L15.5,1.6 C15.5,1.01089627 15.0522847,0.533333333 14.5,0.533333333 Z" id="Shape"></path>
+            <path d="M8,8 L13,8" id="Shape"></path>
+            <path d="M3,8 L5,8" id="Shape"></path>
+        </g>
+    </g>
+</svg>

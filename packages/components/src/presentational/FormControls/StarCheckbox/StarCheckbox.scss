@@ -1,0 +1,18 @@
+@import 'imports';
+
+.container {
+	display: inline-block;
+	position: relative;
+	line-height: 1;
+}
+
+.input {
+	display: none;
+}
+
+.label {
+	cursor: pointer;
+	display: inline-block;
+	line-height: 1;
+	user-select: none;
+}

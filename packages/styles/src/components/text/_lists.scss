@@ -1,0 +1,30 @@
+/**
+ * List styles
+ * By default none of the lists are styled
+ */
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/**
+ * List styles inside text block
+ */
+
+.text ul {
+	li {
+		@include margins($spacer-y);
+	}
+}
+
+ul.ul-list {
+	list-style-type: disc;
+	padding-left: 2rem;
+
+	li {
+		@include margins($spacer-y);
+	}
+}

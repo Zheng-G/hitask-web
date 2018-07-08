@@ -1,0 +1,90 @@
+@import 'imports';
+
+$head-height: 4rem;
+$horizontal-offset: 0.8rem;
+$icons-size: 1.6rem;
+$expand-collapse-duration: 200ms; // Should be equal to the value in components/Item/Item.js
+$properties-side-offset: 1.6rem; // Reused in ItemView
+$child-horizontal-offset: 2rem;
+$shadow-color: rgba(0, 0, 0, 0.11);
+// $line-color: $color-line-light;
+
+@mixin item-properties-row {
+	display: flex;
+	min-height: 5rem;
+	align-items: center;
+	padding: 0.5rem $properties-side-offset;
+}
+
+.itemRoot {
+	position: relative;
+	opacity: 1;
+
+	&.isDragging {
+		opacity: 0.5;
+	}
+}
+
+.itemWrapper {
+	position: relative;
+	width: 100%;
+	border: 0.1rem solid transparent;
+	background-color: $white;
+	color: $color-text-item;
+	font-weight: normal;
+	font-size: 1.35rem;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-feature-settings: 'kern' on, 'calt' on, 'onum' on, 'pnum' on;
+	display: flex;
+	flex-direction: column;
+	transition: margin-top $expand-collapse-duration $pt-transition-ease;
+
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		box-shadow: 0 0 0.8rem 0 $shadow-color;
+		opacity: 0;
+		transition: opacity $expand-collapse-duration $pt-transition-ease;
+	}
+
+	&.expanded {
+		margin-top: 0.4rem;
+		margin-bottom: 0.8rem;
+
+		@include color-theme(0) {
+			border-color: $hi-gray14;
+		}
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&:not(.expanded) {
+		@include color-theme(0) {
+			border-bottom-color: $hi-light-gray7;
+		}
+	}
+
+	.isDragging & {
+		background-color: $white;
+	}
+}
+
+.toggleHierarchyButton {
+	position: absolute;
+	z-index: 1;
+	top: ($head-height - $icons-size) / 2;
+	left: -1.5rem;
+	cursor: pointer;
+}
+
+.addSubitemContainer {
+	padding-left: $child-horizontal-offset;
+}

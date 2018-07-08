@@ -1,0 +1,11 @@
+@import 'imports';
+
+.callout:global(.pt-callout) {
+	@include color-theme(0) {
+		color: $black;
+	}
+
+	h5 {
+		font-size: 1.077em;
+	}
+}

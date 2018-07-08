@@ -1,0 +1,75 @@
+/*
+ * Body styles
+ */
+
+html,
+body {
+	// Needed because some decorations go outside the viewport causing
+	// scrollbars to appear
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.ui-dark-background {
+	background: $color-background-dark;
+}
+
+.ui-light-background {
+	background: $color-background-light;
+}
+
+.ui-silver-background {
+	background: $color-background-silver;
+}
+
+body,
+.ui-white-background {
+	background: $color-background-white;
+}
+
+section {
+	position: relative;
+}
+
+/*
+ * Fix box sizing nightmare
+ */
+
+* {
+	&,
+	&::after,
+	&::before {
+		box-sizing: border-box;
+	}
+}
+
+/*
+ * Responsive Images
+ */
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*
+ * Z-index to prevent overlapping
+ */
+
+article,
+figure {
+	position: relative;
+	z-index: 1;
+}
+
+/*
+ * Safari bug with text centered when button is flex
+ */
+
+button div {
+	width: 100%;
+}

@@ -1,0 +1,87 @@
+@import 'imports';
+
+.popover,
+.popover:global(.pt-popover) {
+	> :global(.pt-popover-content) {
+		max-width: none !important;
+		width: 500px;
+
+		@include media-breakpoint(sm-down) {
+			width: 450px;
+		}
+	}
+}
+
+.body {
+	padding-top: 0;
+}
+
+.weekdaysRow {
+	width: 315px;
+
+	@include media-breakpoint(sm-down) {
+		width: 100%;
+	}
+
+	:global(.pt-control) {
+		padding-left: 0;
+		padding-top: 26px;
+		margin-right: 0 !important;
+		width: 45px;
+		text-align: center;
+		border-width: 1px;
+		border-style: solid;
+		border-right: none;
+		overflow: hidden;
+
+		@include color-theme(0) {
+			border-color: $hi-light-gray1;
+		}
+
+		@include media-breakpoint(sm-down) {
+			width: (100%/7);
+		}
+
+		&:first-child {
+			border-top-left-radius: $pt-border-radius;
+			border-bottom-left-radius: $pt-border-radius;
+		}
+
+		&:last-child {
+			border-top-right-radius: $pt-border-radius;
+			border-bottom-right-radius: $pt-border-radius;
+			border-right-width: 1px;
+			border-right-style: solid;
+
+			@include color-theme(0) {
+				border-right-color: $hi-light-gray1;
+			}
+		}
+
+		input[type='checkbox'].weekdayIndicator,
+		.weekdayIndicator:global(.pt-control-indicator) {
+			top: 11px;
+			transform: translateX(-50%);
+			left: 50%;
+		}
+	}
+}
+
+.summaryRow {
+	align-items: flex-start;
+	min-height: 60px;
+}
+
+.dateInputRow {
+	:global(.pt-control) {
+		margin-left: 20px;
+	}
+}
+
+.dateInput {
+	:global(.DayPicker-Day--today) {
+		@include color-theme(0) {
+			color: $hi-red2;
+		}
+	}
+}

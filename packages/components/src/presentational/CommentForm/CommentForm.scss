@@ -1,0 +1,46 @@
+@import 'imports';
+
+.form {
+	display: flex;
+	overflow: hidden;
+	padding: 0 1.4rem;
+}
+
+.icon {
+	flex-basis: $pt-input-height - 4px;
+	width: $pt-input-height - 4px;
+	min-width: $pt-input-height - 4px;
+	height: $pt-input-height;
+	line-height: $pt-input-height;
+	color: $hi-gray20;
+	text-align: right;
+	padding: 0.7rem 0.2rem 0.8rem;
+}
+
+.commentWrapper {
+	flex-grow: 2;
+}
+
+.comment {
+	&::before {
+		left: -$pt-input-height;
+		border: 0.1rem solid transparent;
+		border-bottom-color: $grey2;
+		box-shadow: none;
+		border-radius: 0;
+		transition: border-color 0.3s, border-radius 0.3s;
+	}
+
+	&:global(.pt-editable-editing)::before {
+		background-color: transparent;
+		border-bottom-color: #c4c6c8;
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	&:not(:global(.pt-editable-editing)):hover::before {
+		border-color: $grey2;
+		box-shadow: none;
+		border-radius: $pt-border-radius;
+	}
+}

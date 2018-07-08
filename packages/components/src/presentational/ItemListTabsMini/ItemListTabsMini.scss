@@ -1,0 +1,82 @@
+@import 'imports';
+
+$side-offset: 3.2rem;
+$active-color: $hi-blue5;
+
+.container {
+	height: 100%;
+	position: relative;
+}
+
+.tabs {
+	height: 100%;
+	position: relative;
+	padding-top: $pt-button-height;
+	background: $color-background;
+
+	:global(.pt-tab-list) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+
+	:global(.pt-tab-panel) {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+		margin-top: 0;
+		margin-left: -$side-offset;
+		margin-right: -$side-offset;
+		padding-left: $side-offset;
+		padding-right: $side-offset;
+	}
+
+	:global(.pt-tab) {
+		font-size: 1.154em;
+	}
+
+	:global(.pt-tab[aria-selected='true']) {
+		color: $active-color;
+		box-shadow: inset 0 -3px 0 $active-color;
+	}
+
+	:global(.pt-tab-indicator-wrapper .pt-tab-indicator) {
+		background-color: $active-color;
+	}
+
+	&.withToolbar {
+		:global(.pt-tab-panel) {
+			padding-top: $toolbar-mini-height;
+			transition: padding-top $central-header-animation-duration
+				$central-header-animation-ease;
+		}
+
+		:global(.pt-tab-list)::before {
+			content: none;
+		}
+
+		&.collapsedHeader {
+			:global(.pt-tab-panel) {
+				padding-top: 0;
+			}
+
+			:global(.pt-tab-list)::before {
+				content: '';
+			}
+		}
+	}
+}
+
+.toolbarContainer {
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.panelContainer {
+	height: 100%;
+}

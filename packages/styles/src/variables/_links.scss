@@ -1,0 +1,36 @@
+/**
+ * Link styles
+ *
+ * Settings for the anchor elements
+ *
+ * For each theme is generated "%link--style-NAME" placeholder selector
+ * For each decoration is generated "%link--decoration-NAME" placeholder selector
+ *
+ * @see base/_links.scss
+ * @param {map} $link-styles           Link colors
+ * @param {map} $link-decorations      Link decoration styles
+ */
+
+$link-styles: (
+	'default':
+		(normal: $color-link, hover: darken($color-link, 15%), active: darken($color-link, 15%)),
+	'heading': (normal: $color-heading, hover: $color-secondary, active: $color-secondary),
+	'text': (normal: $color-text, hover: $color-link, active: $color-link),
+	'inverted':
+		(
+			normal: $color-link-inverted,
+			hover: lighten($color-link-inverted, 15%),
+			active: lighten($color-link-inverted, 15%)
+		),
+	'nav-page':
+		(
+			normal: $color-text-inverted,
+			hover: $color-heading-inverted,
+			active: $color-heading-inverted
+		)
+);
+
+$link-decorations: (
+	'default': (normal: none, hover: none, active: none),
+	'none': (normal: none, hover: none, active: none)
+);

@@ -1,0 +1,7 @@
+doctype html
+
+html
+	head
+		- var prefix = dev ? 'http://' + host + ':' + port : ''
+		script(src=prefix + '/vendors.chunk.js')
+		script(src=prefix + '/background.bundle.js')

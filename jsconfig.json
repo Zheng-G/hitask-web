@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"experimentalDecorators": true,
+		"module": "commonjs",
+		"baseUrl": ".",
+		"paths": {
+			"@hitask/constants/*": ["./packages/constants/src/*"],
+			"@hitask/components/*": ["./packages/components/src/*"],
+			"@hitask/modules/*": ["./packages/modules/src/*"],
+			"@hitask/styles/*": ["./packages/styles/src/*"],
+			"@hitask/utils/*": ["./packages/utils/src/*"]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"**/node_modules",
+		"dist"
+	]
+}

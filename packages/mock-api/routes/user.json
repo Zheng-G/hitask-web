@@ -1,0 +1,43 @@
+{
+	"authenticate": {
+		"login_id": "fake-login",
+		"account_type": "TEAM_BUSINESS",
+		"level": 300,
+		"session_id": "9c0f85c8-f9ca-4a95-974a-5a06eebcd6da",
+		"id": 190960,
+		"picture_hash": "98533096-6215-4d15-9714-53e6f270b8b6",
+		"email_confirmed": "fake-email@mock.api",
+		"email": "fake-email@mock.api"
+	},
+	"logout": {
+		"response_status": 0
+	},
+	"preferences": {
+		"notify_web": "true",
+		"notify_web_item_reminder": "true",
+		"bigCalendarMode": "week",
+		"notify_app_item_reminder": "true",
+		"task_3721910#2017-05-22": "0",
+		"task_3721910#2017-05-21": "0",
+		"task_3721943#2017-05-21": "0",
+		"task_3721943#2017-05-24": "0",
+		"task_3721943#2017-05-23": "1",
+		"notify_email": "true",
+		"task_3721910#2017-05-24": "0",
+		"task_3721910#2017-05-23": "1",
+		"p_date_tomorrow": "0",
+		"weekly_summary_email": "false",
+		"time_format": "24",
+		"notify_email_item_reminder": "true",
+		"default_assign_user": "0",
+		"default_sharing_permission_last": "[{\"level\":50,\"principal\":\"191242\"},{\"level\":100,\"principal\":\"190960\"},{\"level\":100,\"principal\":\"191048\"}]",
+		"time_zone": "Europe/Kiev",
+		"item.action.combobutton.last-used": "DUPLICATE",
+		"p_0_completed": "1",
+		"last_created_item_type": "1",
+		"default_shared": "true",
+		"tabs_display": "{\"today\":true,\"my\":true,\"overdue\":false,\"date\":true,\"calendar\":true,\"project\":true,\"color\":true,\"team\":true,\"activity\":false}",
+		"show_confirmation_complete": "false",
+		"notify_app": "true"
+	}
+}

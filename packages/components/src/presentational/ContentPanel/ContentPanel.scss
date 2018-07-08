@@ -1,0 +1,31 @@
+@import 'imports';
+
+.panel {
+	background: $white;
+	text-align: center;
+	width: 100%;
+	max-width: 61rem;
+	position: relative;
+	box-shadow: 0 6rem 12rem rgba($color-shadow, 0.15);
+	border-radius: $pt-border-radius;
+	overflow: hidden;
+	padding: 1.5rem;
+
+	&.loading {
+		> .contentWrapper {
+			filter: blur(2px);
+		}
+	}
+}
+
+.loader {
+	background-color: rgba(255, 255, 255, 0.65);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

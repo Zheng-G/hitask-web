@@ -1,0 +1,99 @@
+@import 'imports';
+
+$selected-width: 2.2rem;
+$option-width: 4rem;
+$selected-target-correction: 0.4rem;
+
+.targetContainer {
+	padding: 0 $selected-target-correction;
+	margin: 0 -$selected-target-correction;
+}
+
+.selected {
+	width: $selected-width;
+	height: $selected-width;
+	cursor: pointer;
+	border-radius: $pt-border-radius;
+	border: 0.1rem solid $hi-blue4;
+	background: none;
+}
+
+:global(.pt-tether-element-attached-top.pt-tether-target-attached-bottom) {
+	> :global(.pt-popover).popover {
+		margin-top: 3px;
+
+		> :global(.pt-popover-arrow) {
+			top: -6px;
+		}
+	}
+}
+
+.content {
+	border-radius: $pt-border-radius;
+	overflow: hidden;
+}
+
+.title {
+	display: block;
+	text-align: center;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+.optionsContainer {
+	width: $option-width * 4;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+:global(.pt-control).optionContainer {
+	width: $option-width;
+	height: $option-width;
+	cursor: pointer;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.optionIndicator {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.optionIcon {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $white;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 210%;
+		height: 210%;
+		top: -55%;
+		left: -55%;
+		border: 1px solid transparent;
+		border-radius: $pt-border-radius;
+	}
+
+	&.selectedIcon {
+		&::after {
+			border-color: $white;
+		}
+	}
+
+	&.noneIcon {
+		color: $hi-gray13;
+
+		&.selectedIcon {
+			color: $black;
+
+			&::after {
+				border-color: $black;
+			}
+		}
+	}
+}

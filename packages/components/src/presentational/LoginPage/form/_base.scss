@@ -1,0 +1,55 @@
+/*
+ * Style reset
+ */
+
+%input-layout {
+	width: 100%;
+	height: 4rem;
+	padding: 0 1rem;
+	background: $color-background-light;
+	border: 0;
+	border-radius: 0.4rem;
+
+	@include media-breakpoint(md-up) {
+		padding: 0 1.5rem;
+	}
+}
+
+%input-text {
+	// Text
+	color: $color-text;
+	line-height: normal;
+	letter-spacing: -0.01em;
+	font-weight: 500;
+	outline: none;
+	vertical-align: middle;
+
+	// Placeholder styles
+	@include placeholder() {
+		color: $color-text-light;
+	}
+
+	// Focused state
+	&:focus {
+		color: $color-text;
+	}
+}
+
+%input {
+	@extend %input-layout;
+	@extend %input-text;
+
+	// IE clear button
+	&::-ms-clear {
+		display: none;
+	}
+
+	// Animation
+	@extend %transition;
+}
+
+%label {
+	@include margin-values(2rem inherit 0.5rem, false);
+
+	color: $color-heading;
+}

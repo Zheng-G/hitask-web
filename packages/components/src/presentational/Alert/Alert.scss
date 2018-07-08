@@ -1,0 +1,18 @@
+.alert {
+	h5 {
+		font-size: 1.231em;
+		font-weight: 400;
+		margin-bottom: 2rem;
+	}
+
+	h6 {
+		font-size: 1.231em;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	:global(.pt-control.pt-checkbox) {
+		font-size: 1.077em;
+	}
+}

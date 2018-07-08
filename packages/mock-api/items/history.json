@@ -1,0 +1,170 @@
+{
+	"history": [{
+		"id": 3723093,
+		"property_type": "VOID",
+		"time": "2017-05-04T11:05:00.000+00:00",
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_name": "created"
+	}, {
+		"id": 3723094,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-04T11:07:00.000+00:00",
+		"value": "Task time 16-19; every 10 days 04.05, 14.05, 24.05, 3.06, 13.06 last 23.06",
+		"property_name": "title"
+	}, {
+		"id": 3723095,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "Task start 04.05 end 05.05, time 16-19; every 3 weeks 25.05, 15.06, 6.07 last 23.06.18",
+		"property_name": "title"
+	}, {
+		"id": 3723096,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "Everyone (complete and perform transition to another status)",
+		"property_name": "shared_with"
+	}, {
+		"id": 3723090,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "30050",
+		"property_name": "priority"
+	}, {
+		"id": 3723097,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "everyone",
+		"property_name": "tag"
+	}, {
+		"id": 3723098,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "DATE",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "2017-05-05T16:00:00.000+00:00",
+		"property_name": "end"
+	}, {
+		"id": 3723099,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "BOOLEAN",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "true",
+		"property_name": "time_track"
+	}, {
+		"id": 3723010,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "480",
+		"property_name": "time_est"
+	}, {
+		"id": 3723011,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "2",
+		"property_name": "recurring"
+	}, {
+		"id": 3723012,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "3",
+		"property_name": "recurring_interval"
+	}, {
+		"id": 3723013,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-04T11:07:00.000+00:00",
+		"value": "Task time 16-19; every 10 days 04.05, 14.05, 24.05, 3.06, 13.06 last 23.06",
+		"property_name": "title"
+	}, {
+		"id": 3723014,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "Task start 04.05 end 05.05, time 16-19; every 3 weeks 25.05, 15.06, 6.07 last 23.06.18",
+		"property_name": "title"
+	}, {
+		"id": 3723015,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "Everyone (complete and perform transition to another status)",
+		"property_name": "shared_with"
+	}, {
+		"id": 3723016,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "30050",
+		"property_name": "priority"
+	}, {
+		"id": 3723017,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "STRING",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "everyone",
+		"property_name": "tag"
+	}, {
+		"id": 3723018,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "DATE",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "2017-05-05T16:00:00.000+00:00",
+		"property_name": "end"
+	}, {
+		"id": 3723019,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "BOOLEAN",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "true",
+		"property_name": "time_track"
+	}, {
+		"id": 3723020,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "480",
+		"property_name": "time_est"
+	}, {
+		"id": 3723021,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "2",
+		"property_name": "recurring"
+	}, {
+		"id": 3723022,
+		"user_id": 190960,
+		"user_name": "TeaM oWNER",
+		"property_type": "INTEGER",
+		"time": "2017-05-22T19:49:00.000+00:00",
+		"value": "3",
+		"property_name": "recurring_interval"
+	}]
+}

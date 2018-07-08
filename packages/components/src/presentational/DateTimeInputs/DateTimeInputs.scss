@@ -1,0 +1,12 @@
+.dateTimeInputs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem;
+
+	> :global(.pt-popover-target),
+	> :global(.pt-timepicker),
+	> :global(.pt-checkbox),
+	> :global(.pt-button) {
+		margin-bottom: 0.5rem;
+	}
+}

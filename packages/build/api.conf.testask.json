@@ -1,0 +1,8 @@
+{
+	"API_VERSION": 2,
+	"API_VERSION_STR": "2.0",
+	"API_KEY": "hitask_api_key_test",
+	"API_BASE_URL": "https://testask.com",
+	"API_BASE_HOST": "testask.com",
+	"API_URL_INDEX": "api/v5"
+}

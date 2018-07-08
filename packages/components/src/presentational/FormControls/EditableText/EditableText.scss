@@ -1,0 +1,42 @@
+@import 'imports';
+
+$input-height: 2.2rem;
+
+.container {
+	padding: 0.4rem 0.4rem;
+	border-radius: $pt-border-radius;
+	width: 100%;
+
+	&.textareaStyle {
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+		@include color-theme(0) {
+			background: $white;
+		}
+
+		.element {
+			padding-left: 0;
+			padding-right: 0;
+
+			&::before {
+				left: -1rem;
+				right: -1rem;
+			}
+		}
+	}
+}
+
+.element {
+	line-height: $input-height;
+	box-sizing: content-box;
+	min-height: $input-height;
+
+	> :global(.pt-editable-content) {
+		min-height: $input-height;
+		padding-right: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

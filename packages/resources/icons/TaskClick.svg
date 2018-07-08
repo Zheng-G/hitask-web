@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+	<g id="Item-View" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Item-Complete" transform="translate(-79.000000, -172.000000)">
+			<g id="item-in-list-/-task-click" transform="translate(79.000000, 172.000000)">
+				<g id="check-square-09" stroke-width="1" fill-rule="evenodd"></g>
+				<g id="Rectangle-2">
+					<use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+					<rect stroke="#4A4A4A" stroke-width="1" x="0.5" y="0.5" width="15" height="15" rx="4"></rect>
+				</g>
+				<polyline id="Shape" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4 8 7 11 13 5"></polyline>
+			</g>
+		</g>
+	</g>
+</svg>

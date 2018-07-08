@@ -1,0 +1,88 @@
+@import 'imports';
+
+$rowHeight: 5rem;
+
+.navbar {
+	@extend %layout-order-top;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $rowHeight;
+	padding-left: 1.8rem;
+	padding-right: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom-width: 0.1rem;
+	border-bottom-style: solid;
+
+	@include color-theme(0) {
+		background: $white;
+		border-bottom-color: $color-line-gray;
+	}
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+	line-height: $rowHeight;
+	height: $rowHeight;
+	font-size: 1.385em;
+	margin-top: 0;
+	margin-bottom: -$rowHeight;
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: $rowHeight;
+}
+
+.logoLabel {
+	margin-left: 0.3rem;
+	color: $hi-red2;
+	cursor: default;
+}
+
+.centerContainer {
+	flex-grow: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0 0.5rem;
+}
+
+.avatarCont {
+	position: relative;
+	height: 2.4rem;
+	padding-left: 1.2rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 0.1rem;
+		height: 2rem;
+		top: 0.2rem;
+		left: 0;
+		border-left-width: 0.1rem;
+		border-left-style: solid;
+
+		@include color-theme(0) {
+			border-left-color: $color-line-gray;
+		}
+	}
+
+	&.clickable {
+		.avatar,
+		:global(.pt-popover-target) {
+			cursor: pointer;
+		}
+	}
+}
+
+.avatar {
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: 50%;
+}

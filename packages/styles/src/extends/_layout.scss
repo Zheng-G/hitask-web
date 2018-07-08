@@ -1,0 +1,53 @@
+/**
+ * Layout component, which is above other components
+ */
+
+%layout-order-above-top {
+	z-index: 20;
+}
+
+%layout-order-top {
+	z-index: 19;
+}
+
+%layout-order-under-top {
+	z-index: 18;
+}
+
+%layout-order-mid {
+	z-index: 10;
+}
+
+%layout-order-bottom {
+	z-index: 0;
+}
+
+/**
+ * Layout component, which covers whole viewport
+ */
+
+%layout-size-viewport {
+	min-height: 100vh;
+}
+
+/**
+ * Layout component which covers parent
+ */
+
+%layout-position-overlay {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+%layout-position-overlay-extended {
+	display: block;
+	position: absolute;
+	left: -15px;
+	top: -15px;
+	right: -15px;
+	bottom: -15px;
+}

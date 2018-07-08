@@ -1,0 +1,7 @@
+{
+	"url": {
+		"content_type": "image/jpeg",
+		"mime_type": "image/jpeg",
+		"url": "https://testask.s3.amazonaws.com/files/0e9e3b6e-401b-4e9e-b194-c28b5f848ad0/CI_185_DK.jpg?X-Amz-Algorithm\u003dAWS4-HMAC-SHA256\u0026X-Amz-Date\u003d20180314T182339Z\u0026X-Amz-SignedHeaders\u003dhost\u0026X-Amz-Expires\u003d601199\u0026X-Amz-Credential\u003dAKIAJCX6VE3LV7TBCEUA%2F20180314%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Signature\u003db63e5786ff75ce6b79f131b7225cb3d015308347d0b6df5c1d9738f96c8ba45e"
+	}
+}

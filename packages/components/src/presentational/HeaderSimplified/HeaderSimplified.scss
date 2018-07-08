@@ -1,0 +1,42 @@
+/**
+ * Simplified header, logo only
+ */
+@import 'imports';
+
+.logo {
+	display: block;
+	padding: 1.6rem 2rem 1.4rem;
+
+	.icon {
+		@extend %transition;
+
+		transition-property: width, height;
+		display: block;
+		width: 8.2rem;
+		height: 1.5rem;
+	}
+
+	@include media-breakpoint(md-up) {
+		padding: 3rem 3rem 2.4rem;
+
+		// To center primary navigation to match design we need to increase
+		// logo size so that it's similar width to secondary navigation
+		// margin-right: 6rem;
+
+		.icon {
+			width: 10.9rem;
+			height: 2rem;
+		}
+	}
+}
+
+.header {
+	@extend %layout-order-top;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+}

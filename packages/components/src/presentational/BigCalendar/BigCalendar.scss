@@ -1,0 +1,30 @@
+.calendar {
+	padding: 1rem 0 1rem 0;
+
+	:global(.rbc-event) {
+		padding: 0 0.2rem 0 0.2rem;
+		margin: 0 0.2rem 0 0.2rem;
+		font-size: 1.2rem;
+		background-color: #e8e8e8;
+		border-radius: 3px;
+		color: #292727;
+	}
+
+	:global(.rbc-toolbar) {
+		font-size: 1.231em;
+	}
+
+	:global(.rbc-toolbar button) {
+		font-size: 0.937em;
+	}
+}
+
+.event {
+	padding: 0.2rem 0.5rem;
+}
+
+.completedEvent {
+	.title {
+		text-decoration: line-through;
+	}
+}

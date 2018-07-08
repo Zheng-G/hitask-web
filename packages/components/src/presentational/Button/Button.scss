@@ -1,0 +1,12 @@
+@import 'imports';
+
+.semiMinimal {
+	background-color: $hi-light-gray10 !important;
+	border: 1px solid $hi-light-gray2;
+	border-radius: 4px;
+	font-size: 1.25rem;
+
+	&:hover {
+		background-color: $hi-light-gray1 !important;
+	}
+}

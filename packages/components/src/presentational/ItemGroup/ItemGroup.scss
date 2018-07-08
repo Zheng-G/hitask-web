@@ -1,0 +1,137 @@
+@import 'imports';
+
+$group-head-color: $hi-gray12;
+$group-icon-custom-size: 1.6rem;
+
+.group {
+	border-radius: $pt-border-radius;
+	margin-bottom: 1.5rem;
+
+	> :global(.pt-collapse),
+	> :global(.pt-collapse) > :global(.pt-collapse-body) {
+		border-bottom-left-radius: inherit;
+		border-bottom-right-radius: inherit;
+	}
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+	min-height: 4rem;
+	cursor: pointer;
+	user-select: none;
+	border-bottom-width: 0.1rem;
+	border-bottom-style: solid;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+
+	@include color-theme(0) {
+		color: $group-head-color;
+		background: $white;
+		border-bottom-color: $color-line-light;
+	}
+}
+
+.title,
+.counter {
+	font-size: 0.923em;
+	margin: 0 0.5rem;
+}
+
+.title {
+	font-weight: 400;
+	flex-grow: 2;
+
+	@include color-theme(0) {
+		color: $group-head-color;
+	}
+}
+
+.titledGroup {
+	margin-bottom: 0.8rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.listContainer {
+		padding: 0.4rem;
+		border-bottom-left-radius: inherit;
+		border-bottom-right-radius: inherit;
+
+		@include color-theme(0) {
+			background: $white;
+		}
+	}
+}
+
+.icon:global(.pt-icon-standard) {
+	font-size: 1.385em;
+}
+
+.customIcon {
+	padding: 0 0.5rem 0 0.2rem;
+	width: $group-icon-custom-size + 0.5rem + 0.2rem;
+	height: $group-icon-custom-size;
+}
+
+/* Custom groups */
+.overdueGroup {
+	border-width: 0.1rem;
+	border-style: solid;
+
+	@include color-theme(0) {
+		border-color: $hi-pink2;
+	}
+
+	.head {
+		@include color-theme(0) {
+			background-color: $hi-pink3;
+		}
+	}
+
+	&.closed {
+		.head {
+			border-bottom-color: transparent;
+			border-bottom-left-radius: inherit;
+			border-bottom-right-radius: inherit;
+		}
+	}
+
+	.head,
+	.title {
+		@include color-theme(0) {
+			color: $hi-red2;
+		}
+	}
+
+	.icon:global(.pt-icon-standard) {
+		@include color-theme(0) {
+			color: $hi-red5;
+		}
+	}
+}
+
+.projectGroup {
+	border-width: 0.1rem;
+	border-style: solid;
+
+	@include color-theme(0) {
+		border-color: $hi-light-gray2;
+	}
+
+	.head {
+		@include color-theme(0) {
+			background-color: $hi-white1;
+		}
+	}
+
+	&.closed {
+		.head {
+			border-bottom-color: transparent;
+			border-bottom-left-radius: inherit;
+			border-bottom-right-radius: inherit;
+		}
+	}
+}

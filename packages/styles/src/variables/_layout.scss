@@ -1,0 +1,79 @@
+/**
+ * Grid
+ *
+ * Grid system settings
+ * All resolution styles cascade up from mobile to desktop
+ *
+ * For each grid container is generated ".container--NAME" classname, except
+ * for "default", for which ".container" classname is generated
+ *
+ * @param {Number}     $grid-columns              Number of columns in the grid
+ * @param {map|Number} $grid-gutter-width         Grid gutter size
+ * @param {map}        $grid-containers           Grid container styles
+ * @param {map}        $grid-containers.default   Default container styles
+ * @param {map}        $grid-containers.default.max-width   Max widths
+ * @param {map}        $grid-containers.default.paddings    Paddings
+ *
+ * @markup
+ *   <div class="container"></div>
+ */
+
+/* stylelint-disable */
+
+$grid-columns: 12;
+
+$grid-gutter-width: (
+	xs: 2rem,
+	md: 4rem
+);
+
+$grid-gutter-half-width: (
+	xs: 2rem,
+	//1rem is too small,
+	so we keep 2rem md: 2rem
+);
+
+$grid-gutter-double-width: (
+	xs: 4rem,
+	md: 8rem
+);
+
+$grid-containers: (
+	'default':
+		(
+			'max-widths': (md: 730px, lg: 810px, lgl: 960px, xl: 1140px),
+			'paddings': (xs: 0 20px, md: 0 20px, lgl: 0)
+		),
+	/*
+	 * Following are container modifiers and will be used together with
+	 * 'default' container, eg.   "container container--content"
+	 */
+		'text': ('paddings': (xs: 20px, md: 100px 20px 75px, lgl: 100px 0 75px)),
+	'title': ('paddings': (xs: 85px 0 75px, md: 150px 20px 75px, lgl: 150px 0 75px)),
+	'content': ('paddings': (xs: 55px 20px 40px, md: 90px 20px, lgl: 105px 0)),
+	'content-top': ('paddings': (xs: 55px 20px 0, md: 90px 20px 0, lgl: 105px 0 0)),
+	'footer': ('paddings': (xs: 41px 20px 44px, md: 65px 20px 50px, lgl: 65px 0 50px)),
+	'wide': ('max-widths': (md: 810px, lg: 960px, lgl: 960px, xl: 1140px)),
+	'articles': ('paddings': (xs: 55px 20px 120px, md: 90px 20px 100px, lgl: 105px 0 130px))
+);
+
+/**
+ * Spacing
+ *
+ * Settings for spacing between most of the elements
+ *
+ * @param {object} $spacer   Spacing
+ */
+
+$spacer-y: (
+	xs: 0.8rem inherit,
+	md: 1rem inherit,
+	lgl: 2rem inherit
+);
+
+$spacer-y-xs: (xs: 0.8rem inherit);
+
+$spacer-y-none: (
+	xs: 0 inherit,
+	md: 0 inherit
+);

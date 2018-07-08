@@ -1,0 +1,13 @@
+/**
+ * Returns nth property from css property list
+ */
+
+@function css-nth($list, $index) {
+	$size: length($list);
+
+	@while $index > $size {
+		$index: max(1, $index - 2);
+	}
+
+	@return nth($list, $index);
+}

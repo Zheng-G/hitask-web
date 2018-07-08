@@ -1,0 +1,13 @@
+/**
+ * Button modifier to make button cover whole container
+ *
+ * @markup
+ *   <a class="btn btn--full-width">
+ *     Button
+ *   </a>
+ */
+
+.btn--full-width {
+	display: flex;
+	width: 100%; // button
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@hitask/utils",
+  "version": "0.1.46",
+  "private": true,
+  "description": "Reusable utility functions",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "npm-run-all -p lint:eslint lint:stylelint",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint -s scss \"src/**/*.scss\""
+  },
+  "dependencies": {
+    "@hitask/blueprint-core": "^1.36.0",
+    "@hitask/constants": "^0.1.30",
+    "axios": "^0.18.0",
+    "is-retina": "^1.0.3",
+    "lodash": "^4.17.5",
+    "moment-timezone": "^0.5.13",
+    "qs": "^6.5.1",
+    "react-redux-i18n": "^1.9.2"
+  },
+  "devDependencies": {
+    "@hitask/test": "^0.1.2"
+  }
+}

@@ -1,0 +1,43 @@
+@import 'imports';
+
+$item-height: 4.5rem;
+$preview-size: 3rem;
+$icon-size: 1.6rem;
+
+.container {
+	display: flex;
+	min-height: $item-height;
+	padding-top: ($item-height - $preview-size) / 2;
+	padding-bottom: ($item-height - $preview-size) / 2;
+	width: 100%;
+	border-bottom: 0.1rem solid $color-line-light;
+}
+
+.previewContainer {
+	width: 3.8rem;
+	min-width: 3.8rem;
+	padding-right: 3.8rem - $preview-size;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.previewImg {
+	width: $preview-size;
+	height: $preview-size;
+	border-radius: $pt-border-radius;
+}
+
+.previewIcon {
+	margin-top: ($preview-size - $icon-size) / 2;
+}
+
+.nameContainer {
+	align-items: center;
+	flex-grow: 2;
+	padding-top: ($preview-size - $icon-size) / 4;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

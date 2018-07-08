@@ -1,0 +1,23 @@
+@import 'imports';
+
+:global {
+	html,
+	body {
+		height: auto !important;
+		min-height: $pt-input-height;
+	}
+
+	body {
+		margin: 1rem !important;
+		padding: 0 !important;
+	}
+}
+
+.optionRow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.optionLabel {
+	line-height: $pt-input-height;
+}

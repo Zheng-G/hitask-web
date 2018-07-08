@@ -1,0 +1,7 @@
+{
+	"LOCALES_SOURCE": "internal",
+	"ENABLE_SETTINGS": false,
+	"ENABLE_IMPORT": false,
+	"INDEPENDENT_IMPORT": false,
+	"SENTRY_PUBLIC_DSN": "https://18032812062f4d2c9cc85c7861565ee0@sentry.io/296728"
+}

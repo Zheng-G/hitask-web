@@ -1,0 +1,31 @@
+@import 'imports';
+
+$title-height: 4rem; // should be equal to Item's title height
+
+.dropWrapper {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: $title-height + 0.4rem;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+
+	&.isOverBefore .beforeDropContainer {
+		border-top: 0.2rem solid $hi-blue5;
+	}
+
+	&.isOverAfter .afterDropContainer {
+		border-bottom: 0.2rem solid $hi-blue5;
+	}
+}
+
+.beforeDropContainer,
+.afterDropContainer {
+	height: 25%;
+}
+
+.intoDropContainer {
+	height: 50%;
+}

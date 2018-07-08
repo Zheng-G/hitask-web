@@ -1,0 +1,20 @@
+{
+  "name": "@hitask/styles",
+  "version": "0.1.19",
+  "private": true,
+  "description": "Reusable global styles, scss variables and mixins",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "npm-run-all -p lint:stylelint",
+    "lint:stylelint": "stylelint -s scss \"src/**/*.scss\""
+  },
+  "devDependencies": {
+    "@hitask/test": "^0.1.2"
+  }
+}

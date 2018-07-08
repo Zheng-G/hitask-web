@@ -1,0 +1,12 @@
+@import 'imports';
+
+.group {
+	> :global(.pt-popover-target) {
+		border-top-left-radius: $pt-border-radius;
+		border-bottom-left-radius: $pt-border-radius;
+	}
+}
+
+:global(.pt-input).input {
+	padding-right: 0;
+}

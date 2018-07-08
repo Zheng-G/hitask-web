@@ -1,0 +1,27 @@
+{
+	"name": "Hitask",
+	"short_name": "Hitask",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/favicon-192x192.png?v=3ealyWvpEq",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/favicon-256x256.png?v=3ealyWvpEq",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#ffffff",
+	"display": "standalone",
+	"prefer_related_applications": true,
+	"related_applications": [{
+		"platform": "play",
+		"id": "com.hitask.android"
+	}, {
+		"platform": "itunes",
+		"url": "https://itunes.apple.com/app/hitask-team-task-management/id556360639"
+	}]
+}

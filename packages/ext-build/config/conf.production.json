@@ -1,0 +1,8 @@
+{
+	"API_SOURCE": "hitask",
+	"GA_ENABLED": true,
+	"GA_TRACK_ID_APP": "UA-1572732-15",
+	"GA_TRACK_ID_CALENDAR": "UA-1572732-16",
+	"PLAY_APP_BASE_URL": "https://hitask.com",
+	"NODE_APP_BASE_URL": "https://app.hitask.com"
+}

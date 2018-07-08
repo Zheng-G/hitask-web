@@ -1,0 +1,33 @@
+/**
+ * Buttons
+ *
+ * Creates a button. Can be used with either <a>, <button> or <input type="submit"> elements.
+ */
+
+.btn {
+	border: 0;
+	box-shadow: none;
+	background-color: transparent;
+	position: relative;
+
+	// Text
+	@extend %link--decoration-none;
+
+	font-weight: 400;
+	text-align: center;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	// Horizontally and vertically align content
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	// Disabled state
+	&.is-disabled,
+	&:disabled,
+	&[disabled] {
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>new item/task</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-item/task" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="new-item-task" transform="translate(1.000000, 0.000000)" stroke="#7A8090">
+            <path d="M11.5,1.5 L12.5,1.5 C13.0522847,1.5 13.5,1.94771525 13.5,2.5 L13.5,14.5 C13.5,15.0522847 13.0522847,15.5 12.5,15.5 L1.5,15.5 C0.94771525,15.5 0.5,15.0522847 0.5,14.5 L0.5,2.5 C0.5,1.94771525 0.94771525,1.5 1.5,1.5 L2.5,1.5" id="Shape"></path>
+            <rect id="Rectangle-path" x="4.5" y="0.5" width="5" height="2"></rect>
+            <polyline id="Shape" points="4 9 6 11 10 7"></polyline>
+        </g>
+    </g>
+</svg>

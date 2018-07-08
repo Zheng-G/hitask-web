@@ -1,0 +1,6 @@
+<svg class="icon-project-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="nonzero">
+        <path class="icon-project-closed--bottom" fill="#749BB9" d="M0 8v7c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V8H0z"/>
+        <path fill="#91A9BB" d="M16 6V4c0-.6-.4-1-1-1H8.4L5.7.3C5.5.1 5.3 0 5 0H1C.4 0 0 .4 0 1v5h16z"/>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+@import 'imports';
+
+.wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	overflow: auto;
+	padding: 0 1.5rem;
+}

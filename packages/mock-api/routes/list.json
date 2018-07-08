@@ -1,0 +1,35 @@
+{
+	"business": {
+		"level": 100,
+		"domainName": "hetw3",
+		"domainId": 4640,
+		"canInvite": true,
+		"inv_sent": [{
+			"id": 3074,
+			"userId": 191047,
+			"firstName": "Member",
+			"lastName": "invited",
+			"declined": false,
+			"inviterName": "Member invited"
+		}],
+		"inv_get": [],
+		"title": "Hetw3",
+		"license_usage": 5,
+		"license_count": 10,
+		"expiration_date": "2047-09-28T00:00:00.000+00:00",
+		"planPeriod": 1,
+		"accountCreateTime": "2017-05-04T10:48:32.379+00:00",
+		"pictureHash": "c37b5c85-7b1a-4d0e-aa9f-131730d41d32",
+		"numberOfProjects": 0,
+		"numberOfItems": 0,
+		"numberOfArchived": 0,
+		"accountUpgradeDate": "2017-05-04T12:28:00.739+00:00",
+		"isPremium": false,
+		"paymentAmountLast": 30.0,
+		"paymentAmountLifetime": 30.0,
+		"invitationLink": "https://testask.com/signup-team/95481211-d5a2-4863-a265-f47b06242b77",
+		"emailInbox": "78b46b7f3e9ba0d29b592122@testask.com",
+		"everyoneGroupId": "5a22de84-aa94-424a-9eec-6f6bcc198579",
+		"emailConfirmed": true
+	}
+}

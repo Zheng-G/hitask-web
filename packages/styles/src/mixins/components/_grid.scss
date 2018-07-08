@@ -1,0 +1,229 @@
+/*
+ * Grid generator mixins
+ */
+
+/**
+ * Mixin to generate grid container classnames
+ *
+ * @param {map} $containers Containers
+ * @param {Number?} $gutter Gutter between grid columns
+ */
+@mixin grid-containers($containers, $gutter: 0) {
+	// Generate classnames for each grid container
+	// Default container will be .container, all other will be .container--NAME
+	@each $name, $container in $containers {
+		@if $name != 'default' {
+			&--#{$name} {
+				@include grid-container($container, $gutter);
+			}
+		} @else {
+			@include grid-container($container, $gutter);
+		}
+	}
+}
+
+/**
+ * Mixins to generate content for grid container classname
+ *
+ * @param {map} $container Container
+ * @param {map} $container.max-width List of max-widths
+ * @param {map} $container.paddings  List of paddings
+ * @param {Number?} $gutter Gutter between grid columns
+ */
+@mixin grid-container($container, $gutter: 0) {
+	// Content should be relative to container
+	position: relative;
+
+	// Max-width
+	@if map-has-key($container, max-widths) {
+		$max-widths: map-get($container, max-widths);
+
+		@each $breakpoint, $max-width in $max-widths {
+			@include media-breakpoint('#{$breakpoint}-up') {
+				max-width: if($max-width > 0, $max-width, none);
+
+				// Centered
+				margin-right: if($max-width > 0, auto, 0);
+				margin-left: if($max-width > 0, auto, 0);
+			}
+		}
+	}
+
+	// Paddings
+	@if map-has-key($container, paddings) {
+		$paddings: map-get($container, paddings);
+
+		@each $breakpoint, $padding in $paddings {
+			@include media-breakpoint('#{$breakpoint}-up') {
+				padding: $padding;
+			}
+		}
+	}
+}
+
+@mixin grid-row() {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin grid-row-pad($gutter: $grid-gutter-width) {
+	@if $gutter {
+		@if type-of($gutter) != 'map' {
+			margin-left: ($gutter / -2);
+			margin-right: ($gutter / -2);
+
+			> .col {
+				margin-left: ($gutter / 2);
+				margin-right: ($gutter / 2);
+			}
+		} @else {
+			@each $breakpoint, $padding in $gutter {
+				@include media-breakpoint('#{$breakpoint}-up') {
+					margin-left: ($padding / -2);
+					margin-right: ($padding / -2);
+
+					> .col {
+						padding-left: ($padding / 2);
+						padding-right: ($padding / 2);
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin grid-alignment($breakpoints) {
+	@each $breakpoint in $breakpoints {
+		@include media-breakpoint('#{$breakpoint}-up') {
+			// Horizontal alignment
+			.start-#{$breakpoint} {
+				justify-content: flex-start;
+				text-align: start;
+			}
+
+			.center-#{$breakpoint} {
+				justify-content: center;
+				text-align: center;
+			}
+
+			.end-#{$breakpoint} {
+				justify-content: flex-end;
+				text-align: end;
+			}
+
+			// Vertical alignment
+			.top-#{$breakpoint} {
+				align-items: flex-start;
+			}
+
+			.middle-#{$breakpoint} {
+				align-items: center;
+			}
+
+			.bottom-#{$breakpoint} {
+				align-items: flex-end;
+			}
+
+			// Spacing
+			.around-#{$breakpoint} {
+				justify-content: space-around;
+			}
+
+			.between-#{$breakpoint} {
+				justify-content: space-between;
+			}
+
+			// Order
+			.first-#{$breakpoint} {
+				order: -1;
+			}
+
+			.last-#{$breakpoint} {
+				order: 1;
+			}
+		}
+	}
+}
+
+/**
+ * Mixin to generate column classnames for each resolutions
+ *
+ * @param {Number}  $columns     Number of columns
+ * @param {list}    $breakpoints Responsive breakpoints
+ * @param {Number?} $gutter      Gutter between columns
+ */
+@mixin grid-columns($columns, $breakpoints, $gutter: 0) {
+	.col {
+		flex: 1; // allow growing to accomodate all content, no specific size
+		max-width: 100%; // prevent overflowing
+	}
+
+	@each $breakpoint in $breakpoints {
+		@include media-breakpoint('#{$breakpoint}-up') {
+			@for $i from 1 through $columns {
+				.col--#{$breakpoint}-#{$i} {
+					@include grid-column(percentage($i / $columns));
+				}
+			}
+		}
+
+		.col--#{$breakpoint}-auto {
+			flex: 0 0 auto;
+			width: auto;
+			min-width: 0;
+			max-width: 100%;
+		}
+
+		.col--#{$breakpoint}-fit {
+			flex: 1 1 auto;
+			width: auto;
+			min-width: 0;
+			max-width: 100%;
+		}
+	}
+}
+
+/**
+ * Mixin to generate column paddings for each resolutions
+ *
+ * @param {Number}  $columns     Number of columns
+ * @param {list}    $breakpoints Responsive breakpoints
+ * @param {Number?} $gutter      Gutter between columns
+ */
+@mixin grid-columns-pad($columns, $breakpoints, $gutter: 0) {
+	@if $gutter and type-of($gutter) != 'map' {
+		& > .col {
+			padding-left: ($gutter / 2);
+			padding-right: ($gutter / 2);
+		}
+	}
+
+	@each $breakpoint in $breakpoints {
+		@include media-breakpoint('#{$breakpoint}-up') {
+			@if $gutter and type-of($gutter) == 'map' and map-has-key($gutter, $breakpoint) {
+				& > .col {
+					padding-left: (map-get($gutter, $breakpoint) / 2);
+					padding-right: (map-get($gutter, $breakpoint) / 2);
+				}
+			}
+		}
+	}
+}
+
+/*
+ * 1. Fix for IE where paddings are not taken into account even with box-sizing
+ * 2. Fix for Firefox
+ */
+@mixin grid-column($width) {
+	flex: 0 1 $width;
+	width: $width;
+
+	@include browser-ie() {
+		min-width: $width; // 1.
+		max-width: $width; // 1.
+	}
+
+	@include browser-firefox() {
+		max-width: $width; // 2.
+	}
+}

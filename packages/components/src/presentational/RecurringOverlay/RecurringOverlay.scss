@@ -1,0 +1,5 @@
+.card,
+.card:global(.pt-card) {
+	max-width: none !important;
+	width: 500px;
+}

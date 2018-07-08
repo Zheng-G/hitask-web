@@ -1,0 +1,21 @@
+branch-defaults:
+  default:
+    environment: null
+global:
+  application_name: hitask-node-webapp
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Node.js
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: null
+  workspace_type: Application
+option_settings:
+  - namespace: aws:elasticbeanstalk:container:nodejs
+    option_name: NodeVersion
+    value: 8.9.3

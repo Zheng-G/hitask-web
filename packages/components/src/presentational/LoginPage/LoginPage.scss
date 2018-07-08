@@ -1,0 +1,144 @@
+/*
+ * Login page specific styles
+ */
+@import 'imports';
+@import './form/index';
+@import './button/index';
+
+.loadingThrobber {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.loadingState {
+	.formError,
+	.signinForm,
+	.socialSignin {
+		opacity: 0;
+	}
+}
+
+.container {
+	font-family: $text-website-font;
+	font-weight: 300;
+
+	input[type='text'],
+	input[type='password'] {
+		font-family: $text-website-font;
+	}
+
+	@include grid-containers($containers: $grid-containers, $gutter: $grid-gutter-width);
+}
+
+.centeredContainer {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.centeredContent {
+	position: relative;
+	padding: 2rem;
+	border-radius: 0.7rem;
+	box-shadow: 0 6rem 12rem rgba($color-shadow, 0.15);
+
+	@include media-breakpoint(md-up) {
+		padding: 3rem;
+	}
+
+	&.noShadow {
+		box-shadow: none;
+	}
+}
+
+.login {
+	@extend %text--size-medium;
+
+	font-weight: 500;
+	width: 32rem;
+	margin: 5rem 0 4.5rem; // On top space for tabs, on bottom for a link
+
+	:global(p) {
+		@include margins((xs: 1.4rem inherit 1.4rem, md: 1.8rem inherit 1.8rem), false);
+	}
+}
+
+.centeredContentTabs {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 2rem;
+
+	:global(a) {
+		margin: 0.5rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		@include media-breakpoint(sm-down) {
+			font-size: 1.3rem;
+		}
+	}
+
+	/**
+	 * Responsive
+	 */
+	@include media-breakpoint(md-up) {
+		padding: 0 3rem;
+	}
+}
+
+.centeredContentTabsTitle {
+	display: block;
+	position: relative;
+	height: 4.5rem;
+	background: $white;
+	border-radius: 0.4rem 0.4rem 0 0;
+	padding: 0 2rem;
+	color: $color-heading;
+	line-height: 4.5rem;
+	white-space: nowrap;
+
+	&::before,
+	&::after {
+		display: block;
+		content: '';
+		background: url(#{$path-image}/login/tabs-shadow.png) 0 0 no-repeat;
+		width: 0.3rem;
+		height: 0.5rem;
+		position: absolute;
+		bottom: 0;
+	}
+
+	&::before {
+		right: 100%;
+	}
+
+	&::after {
+		background-position: -0.3rem 0;
+		left: 100%;
+	}
+}
+
+.centeredContentFooter {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	padding: 1.5rem 2rem;
+
+	:global(a) {
+		@extend %link--style-text;
+	}
+
+	@include media-breakpoint(md-up) {
+		padding: 2rem 3rem;
+	}
+}

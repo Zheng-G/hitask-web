@@ -1,0 +1,9 @@
+{
+	"API_SOURCE": "hitask",
+	"GA_ENABLED": true,
+	"GA_TRACK_ID": "UA-1572732-1",
+	"INTERCOM_APP_ID": "af11bb3b356161188ab61a12a95d7a316fbd63dc",
+	"INTERCOM_ENABLED": true,
+	"PLAY_APP_BASE_URL": "https://hitask.com",
+	"NODE_APP_BASE_URL": "https://app.hitask.com"
+}

@@ -1,0 +1,70 @@
+/**
+ * Margins mixin
+ */
+
+@mixin margin-value($property, $value, $reset-first: false, $reset-last: false) {
+	#{$property}: $value;
+
+	@if $reset-first {
+		&:first-child {
+			#{$property}: 0;
+		}
+	}
+
+	@if $reset-last {
+		&:last-child {
+			#{$property}: 0;
+		}
+	}
+}
+
+@mixin margin-values($margins, $reset-first-last: true, $property: 'margin', $multiplier: 1) {
+	$top: css-nth($margins, 1);
+	$right: css-nth($margins, 2);
+	$bottom: css-nth($margins, 3);
+	$left: css-nth($margins, 4);
+
+	@if $top != inherit {
+		@include margin-value(
+			#{$property}-top,
+			$top * $multiplier,
+			$reset-first: $reset-first-last,
+			$reset-last: false
+		);
+	}
+
+	@if $right != inherit {
+		@include margin-value(
+			#{$property}-right,
+			$right * $multiplier,
+			$reset-first: false,
+			$reset-last: $reset-first-last
+		);
+	}
+
+	@if $bottom != inherit {
+		@include margin-value(
+			#{$property}-bottom,
+			$bottom * $multiplier,
+			$reset-first: false,
+			$reset-last: $reset-first-last
+		);
+	}
+
+	@if $left != inherit {
+		@include margin-value(
+			#{$property}-left,
+			$left * $multiplier,
+			$reset-first: $reset-first-last,
+			$reset-last: false
+		);
+	}
+}
+
+@mixin margins($margins, $reset-first-last: true, $property: 'margin', $multiplier: 1) {
+	@each $breakpoint, $margin in $margins {
+		@include media-breakpoint('#{$breakpoint}-up') {
+			@include margin-values($margin, $reset-first-last, $property, $multiplier);
+		}
+	}
+}

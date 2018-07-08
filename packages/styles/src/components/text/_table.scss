@@ -1,0 +1,74 @@
+/*
+ * Table styles
+ */
+
+.text table {
+	border-top: 1px solid $color-line;
+
+	h2,
+	h3 {
+		line-height: 1em;
+	}
+
+	td,
+	th {
+		vertical-align: top;
+		border-bottom: 1px solid $color-line;
+		padding: 15px 0 15px 15px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	@include media-breakpoint(md-up) {
+		@include margins(('xs': 3rem inherit, 'md': 7rem inherit));
+
+		td,
+		th {
+			padding: 30px 0 30px 30px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+/*
+ * Table which collapsed on mobile devices
+ *
+ * 1. Overwrite width attribute on table cells
+ */
+
+table.table--mobile-collapse {
+	@include media-breakpoint(sm-down) {
+		th {
+			display: none;
+		}
+
+		tbody,
+		thead,
+		tr,
+		td {
+			width: 100% !important; // 1.
+			display: block;
+		}
+
+		td {
+			text-align: center;
+			border-bottom-width: 0;
+			padding-top: 9px;
+			padding-left: 0;
+
+			&:first-child {
+				padding-top: 25px;
+			}
+
+			&:last-child {
+				padding-bottom: 30px;
+				border-bottom-width: 1px;
+			}
+		}
+	}
+}

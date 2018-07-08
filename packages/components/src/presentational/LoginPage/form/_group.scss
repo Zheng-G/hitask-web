@@ -1,0 +1,29 @@
+/**
+ * Form group
+ */
+
+.formGroup {
+	@include margins((xs: 1rem inherit));
+}
+
+.formFooter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	@include media-breakpoint(xs) {
+		.btn {
+			min-width: 100%;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.formError {
+	color: $color-error;
+	background-color: $color-error-background;
+	border-radius: $pt-border-radius;
+	padding: 0.7rem;
+	margin-bottom: 1rem;
+}

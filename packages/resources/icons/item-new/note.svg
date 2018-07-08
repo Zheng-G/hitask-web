@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>new item/note</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-item/note" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="new-item-note" transform="translate(1.000000, 0.000000)" stroke="#7A8090">
+            <rect id="Rectangle-path" x="0.5" y="0.5" width="13" height="15"></rect>
+            <path d="M3.5,3.5 L10.5,3.5" id="Shape"></path>
+            <path d="M3.5,6.5 L10.5,6.5" id="Shape"></path>
+            <path d="M3.5,9.5 L10.5,9.5" id="Shape"></path>
+            <path d="M3.5,12.5 L6.5,12.5" id="Shape"></path>
+        </g>
+    </g>
+</svg>

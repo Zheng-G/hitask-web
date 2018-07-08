@@ -1,0 +1,38 @@
+/**
+ * Text size / style placeholder classname generator
+ *
+ * For each style is generated "%text--size-NAME" placeholder selector
+ *
+ * @see variables/_text.scss
+ * @example
+ *   .class { @extend %text--size-h1; }
+ */
+
+@each $breakpoint in $media-breakpoints {
+	@include media-breakpoint('#{$breakpoint}-up') {
+		@each $name, $sizes in $text-sizes {
+			$size: map-get($sizes, $breakpoint);
+
+			@if $size {
+				%text--size-#{$name} {
+					@each $name, $value in $size {
+						#{$name}: #{$value};
+					}
+
+					// Reset first, last child margins
+					@if map-has-key($size, 'margin') or map-has-key($size, 'margin-top') {
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+
+					@if map-has-key($size, 'margin') or map-has-key($size, 'margin-bottom') {
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

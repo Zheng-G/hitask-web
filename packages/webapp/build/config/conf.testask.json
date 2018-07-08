@@ -1,0 +1,9 @@
+{
+	"API_SOURCE": "testask",
+	"GA_ENABLED": true,
+	"GA_TRACK_ID": "UA-1572732-8",
+	"INTERCOM_APP_ID": "fadqqwry",
+	"INTERCOM_ENABLED": true,
+	"PLAY_APP_BASE_URL": "https://testask.com",
+	"NODE_APP_BASE_URL": "https://app.testask.com"
+}

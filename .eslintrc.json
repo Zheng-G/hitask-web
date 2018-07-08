@@ -1,0 +1,121 @@
+{
+	"parser": "babel-eslint",
+	"extends": ["airbnb", "prettier"],
+	"plugins": ["jest"],
+	"env": {
+		"browser": true,
+		"jest/globals": true
+	},
+	"globals": {
+		"__DEV__": false,
+		"__PROD__": false,
+		"__DEBUG_PROD__": false,
+		"__ENV__": false,
+		"__TARGET__": false,
+		"__APP_VERSION__": false,
+		"__APP_ID__": false,
+		"__BUILD_ID__": false,
+		"__BUILD_TIMESTAMP__": false,
+		"__ENABLE_SETTINGS__": false,
+		"__ENABLE_IMPORT__": false,
+		"__ENABLE_LOCALES__": false,
+		"__INDEPENDENT_IMPORT__": false,
+		"__BUGSNAG_API_KEY__": false,
+		"__SENTRY_PUBLIC_DSN__": false,
+		"__SENTRY_PRIVATE_DSN__": false,
+		"__INTERCOM_APP_ID__": false,
+		"__GA_TRACK_ID__": false,
+		"__GAUTH_CLIENT_ID__": false,
+		"__GAUTH_CLIENT_SECRET__": false,
+		"__PLAY_APP_BASE_URL__": false,
+		"__NODE_APP_BASE_URL__": false,
+		"__API_SOURCE__": false,
+		"__API_VERSION__": false,
+		"__API_VERSION_STR__": false,
+		"__API_BASE_URL__": false,
+		"__API_BASE_HOST__": false,
+		"__API_KEY__": false,
+		"__API_URL_INDEX__": false,
+		"__LOCALES_SOURCE__": false,
+		"__HOST__": false,
+		"__PORT__": false,
+		"__DEVTOOLS_HOST__": false,
+		"__DEVTOOLS_PORT__": false,
+		"__LOG_RENDER__": false,
+		"__PERF_ANALYZER__": false,
+		"__T": false,
+		"chrome": true
+	},
+	"rules": {
+		"semi" : 0,
+		"max-len": 0,
+		"indent": 0,
+		"no-param-reassign": [2, {"props": false}],
+		"no-console": ["warn", {
+			"allow": ["warn", "error"]
+		}],
+		"comma-dangle": 0,
+		"no-nested-ternary": 0,
+		"no-tabs": 0,
+		"no-uderscore-dangling": 0,
+		"new-cap": 0,
+		"no-underscore-dangle": 0,
+		"prefer-destructuring": 0,
+		"no-unused-vars": 1,
+		"no-else-return": 1,
+		"arrow-body-style": 0,
+		"global-require": 1,
+		"no-plusplus": 1,
+		"newline-per-chained-call": 1,
+		"space-infix-ops": 1,
+		"valid-jsdoc": ["error", {
+			"requireParamDescription": true,
+			"requireReturnDescription": true,
+			"prefer": {
+				"arg": "param"
+			},
+			"preferType": {
+				"object": "Object",
+				"array": "Array",
+				"date": "Date",
+				"moment": "Moment"
+			}
+		}],
+		"import/extensions": {
+			".js": "never",
+			".json": "always",
+			".scss": "always"
+		},
+		"import/no-extraneous-dependencies": 0,
+		"react/no-typos": 0,
+		"react/jsx-filename-extension": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"react/no-string-refs": 1,
+		"react/require-default-props": 1,
+		"react/no-array-index-key": 1,
+		"jsx-a11y/label-has-for": 1,
+		"jsx-a11y/click-events-have-key-events": 1,
+		"jsx-a11y/anchor-is-valid": 0,
+		"jsx-a11y/no-noninteractive-element-interactions": 0,
+		"jsx-a11y/no-static-element-interactions": 1
+	},
+	"settings": {
+		"import/resolver": {
+			"babel-module": {
+				"alias": {
+					"@hitask/constants": "@hitask/constants/src",
+					"@hitask/components": "@hitask/components/src",
+					"@hitask/modules": "@hitask/modules/src",
+					"@hitask/styles": "@hitask/styles/src",
+					"@hitask/icons": "@hitask/resources/icons",
+					"@hitask/utils": "@hitask/utils/src"
+				},
+				"extensions": [".js"]
+			}
+		},
+		"react": {
+			"version": "16.2"
+		}
+	}
+}

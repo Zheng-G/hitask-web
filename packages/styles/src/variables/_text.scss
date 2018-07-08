@@ -1,0 +1,126 @@
+/*
+ * Text
+ *
+ * Settings for text, fonts, sizes
+ *
+ * @param {String} $text-default-font         Text font family
+ * @param {String} $text-heading-font Heading font family
+ * @param {String} $text-code-font    Code element font family
+ */
+
+/* stylelint-disable */
+
+$text-default-font: 'Lato', 'Helvetica', 'Times New Roman', sans-serif;
+$text-website-font: 'Lato', 'Helvetica', 'Times New Roman', sans-serif; // Enabled on Login page only
+$text-heading-font: $text-default-font;
+$text-code-font: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+/**
+ * Text sizes
+ *
+ * Resolution specific font sizes, line height, etc.
+ * All styles cascade up
+ *
+ * For each style is generated "%text--size-NAME" placeholder selector
+ *
+ * @see base/_text-styles.scss
+ * @param (map) $text-styles Text sizes
+ */
+
+$text-sizes: (
+	'default': /* Default text */
+		(
+			xs: ('font-size': 1.3rem, 'line-height': 22 / 13 * 1em, 'font-weight': 400),
+			md: ('font-size': 1.4rem, 'line-height': 26 / 14 * 1em)
+		),
+	'medium': /* Medium text size */
+		(
+			xs: ('font-size': 1.3rem, 'line-height': 20 / 13 * 1em),
+			md: ('font-size': 1.4rem, 'line-height': 23 / 14 * 1em)
+		),
+	'extra-medium': /* Medium text size */
+		(
+			xs: ('font-size': 1.2rem, 'line-height': 16 / 12 * 1em),
+			lg: ('font-size': 1.5rem, 'line-height': 20 / 15 * 1em)
+		),
+	'small': /* Small size text */
+		(
+			xs: ('font-size': 1.2rem, 'line-height': 16 / 12 * 1em, 'font-weight': 400),
+			md: ('font-size': 1.3rem, 'line-height': 18 / 13 * 1em)
+		),
+	'smaller': /* Small size text */
+		(
+			xs:
+				(
+					'font-size': 1.1rem,
+					'line-height': 14 / 11 * 1em,
+					'letter-spacing': 0.02em,
+					'font-weight': 400
+				),
+			lg: ('font-size': 1.3rem, 'line-height': 18 / 13 * 1em, 'letter-spacing': 0em)
+		),
+	'extra-small': /* Small size text */
+		(
+			xs:
+				(
+					'font-size': 1.1rem,
+					'line-height': 16 / 11 * 1em,
+					'letter-spacing': 0.08em,
+					'font-weight': 400
+				),
+			md: ('font-size': 1.1rem, 'line-height': 16 / 11 * 1em, 'letter-spacing': 0.08em)
+		),
+	'lead': /* Lead text */
+		(
+			xs: ('font-size': 1.6rem, 'line-height': 24 / 16 * 1em),
+			md: ('font-size': 2.1rem, 'line-height': 30 / 21 * 1em),
+			lgl: ('font-size': 2.1rem, 'line-height': 30 / 21 * 1em)
+		),
+	'lead-lg':
+		(
+			xs: ('font-size': 1.6rem, 'line-height': 24 / 16 * 1em),
+			md: ('font-size': 2.4rem, 'line-height': 34 / 24 * 1em)
+		),
+	'lead-lgl':
+		(
+			xs: ('font-size': 3rem, 'line-height': 40 / 30 * 1em),
+			lg: ('font-size': 4rem, 'line-height': 50 / 40 * 1em)
+		),
+	'h1': /* Headings */
+		(
+			xs: ('font-size': 2.4rem, 'line-height': 36 / 24 * 1em, 'font-weight': 300),
+			md: ('font-size': 4rem, 'line-height': 50 / 40 * 1em)
+		),
+	'h2':
+		(
+			xs: ('font-size': 1.9rem, 'line-height': 30 / 19 * 1em, 'font-weight': 300),
+			md: ('font-size': 3.5rem, 'line-height': 44 / 35 * 1em)
+		),
+	'h3':
+		(
+			xs: ('font-size': 1.8rem, 'line-height': 1.285em, 'font-weight': 300),
+			md: ('font-size': 2.5rem, 'line-height': 32 / 25 * 1em)
+		),
+	'h4':
+		(
+			xs: ('font-size': 1.5rem, 'line-height': 1.285em, 'font-weight': 300),
+			md: ('font-size': 1.7rem, 'line-height': 1.285em)
+		),
+	'h5':
+		(
+			xs:
+				(
+					'font-size': 1.2rem,
+					'line-height': 1.285em,
+					'font-weight': 700,
+					'letter-spacing': 0.05em
+				),
+			md: ('font-size': 1.3rem, 'line-height': 1.285em)
+		),
+	'code': (xs: ('font-size': 1.3rem, 'line-height': 1.4em, 'font-weight': 400)),
+	'footer':
+		(
+			xs: ('font-size': 1.4rem, 'line-height': 28 / 14 * 1em, 'font-weight': 400),
+			md: ('font-size': 1.5rem, 'line-height': 26 / 15 * 1em)
+		)
+);

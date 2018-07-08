@@ -1,0 +1,19 @@
+doctype html
+
+html
+	head
+		meta(charset='UTF-8')
+		title Hitask Extension | Options
+		link(rel="shortcut icon" type="image/png" href="/images/fav.png")
+		link(rel="icon" type="image/png" href="/images/fav.png" sizes="64x64")
+		link(rel="icon" type="image/png" href="/images/fav_48.png" sizes="48x48")
+		link(rel="icon" type="image/png" href="/images/fav_128.png" sizes="128x128")
+		if !dev
+			link(rel="stylesheet" href="/vendors.css")
+			link(rel="stylesheet" href="/options.css")
+
+	body
+		#reactRoot
+		- var prefix = dev ? 'http://' + host + ':' + port : ''
+		script(src=prefix + '/vendors.chunk.js')
+		script(src=prefix + '/options.bundle.js')

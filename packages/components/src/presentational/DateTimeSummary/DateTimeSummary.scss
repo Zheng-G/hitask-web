@@ -1,0 +1,13 @@
+.container {
+	letter-spacing: 3px;
+	padding-left: 1.2rem;
+
+	:global(a),
+	:global(span) {
+		letter-spacing: normal;
+	}
+}
+
+.disabledLink {
+	cursor: not-allowed;
+}

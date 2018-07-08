@@ -1,0 +1,8 @@
+{
+	"API_VERSION": 2,
+	"API_VERSION_STR": "2.0",
+	"API_KEY": "web1",
+	"API_BASE_URL": "https://hitask.com",
+	"API_BASE_HOST": "hitask.com",
+	"API_URL_INDEX": "api/v5"
+}

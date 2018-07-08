@@ -1,0 +1,39 @@
+{
+  "name": "@hitask/ext-app",
+  "version": "3.1.7",
+  "private": true,
+  "description": "Hitask Chrome app-extension project",
+  "main": "index.js",
+  "buildId": "1676-dd087f97",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "npm-run-all -p lint:eslint lint:stylelint",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint -s scss \"src/**/*.scss\""
+  },
+  "dependencies": {
+    "@hitask/components": "^0.1.56",
+    "@hitask/locales": "^0.1.18",
+    "bluebird": "^3.5.1",
+    "bugsnag-js": "^4.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "react-redux": "^5.0.7",
+    "react-redux-i18n": "^1.9.2",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0",
+    "redux-thunk-fsa": "^4.0.1"
+  },
+  "devDependencies": {
+    "@hitask/ext-build": "^0.1.4",
+    "@hitask/test": "^0.1.2"
+  }
+}

@@ -1,0 +1,16 @@
+.iconCell {
+	min-height: 10rem;
+	margin: 1vw;
+	flex: 1 auto;
+	flex-wrap: wrap;
+	padding: 1em;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px #eeeeee solid;
+
+	.icon {
+		width: 100%;
+	}
+}

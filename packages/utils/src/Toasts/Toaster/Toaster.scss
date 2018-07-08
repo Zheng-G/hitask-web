@@ -1,0 +1,34 @@
+@import 'imports';
+
+.toaster {
+	:global(.pt-toast) {
+		box-shadow: none;
+		align-items: center;
+
+		> :global(.pt-toast-message) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	:global(.pt-toast:not([class*='pt-intent-'])) {
+		@include color-theme(0) {
+			background: $hi-blue4;
+			color: $white;
+		}
+
+		> :global(.pt-icon-standard) {
+			@include color-theme(0) {
+				color: $white;
+			}
+		}
+
+		:global(.pt-button),
+		:global(.pt-button::before),
+		:global(.pt-button:active) {
+			@include color-theme(0) {
+				color: rgba($white, 0.7);
+			}
+		}
+	}
+}

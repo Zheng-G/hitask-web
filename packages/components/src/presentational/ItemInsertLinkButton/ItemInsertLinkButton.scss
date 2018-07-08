@@ -1,0 +1,45 @@
+@import 'imports';
+
+.button {
+	position: relative;
+	border: none;
+	background: none;
+	box-shadow: none;
+	height: $pt-input-height;
+	line-height: $pt-input-height;
+	padding: 0 0.5rem 0 2rem;
+	margin: 0;
+	max-width: 25rem;
+
+	@include color-theme(0) {
+		color: $hi-black;
+	}
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0.2rem;
+}
+
+.prefix {
+	margin-right: 0.4rem;
+
+	@include color-theme(0) {
+		color: $color-brand;
+	}
+}
+
+.pageTitle {
+	//
+}
+
+.textWrapper {
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

@@ -1,0 +1,13 @@
+/**
+ * Deep get for sass maps
+ *
+ * @author https://css-tricks.com/snippets/sass/deep-getset-maps/
+ */
+
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+}

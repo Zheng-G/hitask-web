@@ -1,0 +1,11 @@
+/**
+ * Animations
+ *
+ * @example
+ *   div { @extend %transition; }
+ */
+
+%transition {
+	transition-duration: $duration-normal;
+	transition-timing-function: $easing-standard;
+}

@@ -1,0 +1,279 @@
+/**
+ * Breakpoints for devices / orientations / screens
+ *
+ * @example
+ *   @include media-breakpoint (lg-up) {
+ *     // ...
+ *   }
+ */
+
+$media-breakpoints: (
+	xs,
+	sm,
+	md,
+	lg,
+	lgl,
+	xl
+);
+
+$media-breakpoint-xl: 1600px !default;
+$media-breakpoint-lgl: 1200px !default;
+$media-breakpoint-lg: 980px !default;
+$media-breakpoint-md: 668px !default;
+$media-breakpoint-sm: 480px !default;
+
+$media-breakpoint-xl-up: $media-breakpoint-xl;
+
+$media-breakpoint-lgl-up: $media-breakpoint-lgl;
+$media-breakpoint-lgl-down: $media-breakpoint-lgl - 1px;
+
+$media-breakpoint-lg-up: $media-breakpoint-lg;
+$media-breakpoint-lg-down: $media-breakpoint-xl - 1px;
+
+$media-breakpoint-md-up: $media-breakpoint-md;
+$media-breakpoint-md-down: $media-breakpoint-lg - 1px;
+
+$media-breakpoint-sm-up: $media-breakpoint-sm;
+$media-breakpoint-sm-down: $media-breakpoint-md;
+
+$media-breakpoint-xs-down: $media-breakpoint-sm - 1px;
+
+/*
+ * Check if media query name is valid
+ */
+
+@function is-valid-media-breakpoint($name) {
+	$valid: 'xs', 'sm', 'sm-up', 'sm-down', 'md', 'md-up', 'md-down', 'lg', 'lg-up', 'lg-down',
+		'lgl-down', 'lgl-up', 'xl';
+
+	@each $item in $valid {
+		@if $item == $name {
+			@return true;
+		}
+	}
+
+	@return false;
+}
+
+/*
+ * Output content in media query
+ */
+
+@mixin media-breakpoint($name) {
+	@if $name == 'xl' {
+		@include media-breakpoint-xl() {
+			@content;
+		}
+	} @else if $name == 'xl-up' {
+		@include media-breakpoint-xl-up() {
+			@content;
+		}
+	} @else if $name == 'xl-down' {
+		@include media-breakpoint-xl-down() {
+			@content;
+		}
+	} @else if $name == 'lgl-up' {
+		@include media-breakpoint-lgl-up() {
+			@content;
+		}
+	} @else if $name == 'lgl-down' {
+		@include media-breakpoint-lgl-down() {
+			@content;
+		}
+	} @else if $name == 'lg' {
+		@include media-breakpoint-lg() {
+			@content;
+		}
+	} @else if $name == 'lg-up' {
+		@include media-breakpoint-lg-up() {
+			@content;
+		}
+	} @else if $name == 'lg-down' {
+		@include media-breakpoint-lg-down() {
+			@content;
+		}
+	} @else if $name == 'md' {
+		@include media-breakpoint-md() {
+			@content;
+		}
+	} @else if $name == 'md-up' {
+		@include media-breakpoint-md-up() {
+			@content;
+		}
+	} @else if $name == 'md-down' {
+		@include media-breakpoint-md-down() {
+			@content;
+		}
+	} @else if $name == 'sm' {
+		@include media-breakpoint-sm() {
+			@content;
+		}
+	} @else if $name == 'sm-up' {
+		@include media-breakpoint-sm-up() {
+			@content;
+		}
+	} @else if $name == 'sm-down' {
+		@include media-breakpoint-sm-down() {
+			@content;
+		}
+	} @else if $name == 'xs' {
+		@include media-breakpoint-xs() {
+			@content;
+		}
+	} @else if $name == 'xs-up' {
+		@include media-breakpoint-xs-up() {
+			@content;
+		}
+	} @else if $name == 'xs-down' {
+		@include media-breakpoint-xs-down() {
+			@content;
+		}
+	} @else {
+		@media screen and ($name) {
+			@content;
+		}
+	}
+}
+
+/*
+ * Desktop PC, high-end laptop media queries
+ */
+
+@mixin media-breakpoint-xl() {
+	@media screen and (min-width: $media-breakpoint-xl-up) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-xl-up() {
+	@include media-breakpoint-xl() {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-xl-down() {
+	// xl- is all screens
+	@content;
+}
+
+/*
+ * Desktop PC
+ */
+
+@mixin media-breakpoint-lgl-up() {
+	@media screen and (min-width: $media-breakpoint-lgl-up) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-lgl-down() {
+	@media screen and (max-width: $media-breakpoint-lgl-down) {
+		@content;
+	}
+}
+
+/*
+ * Desktop PC, laptop and tablet in landscape orienation media queries
+ */
+
+@mixin media-breakpoint-lg() {
+	@media screen and (min-width: $media-breakpoint-lg-up) and (max-width: $media-breakpoint-lg-down) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-lg-up() {
+	@media screen and (min-width: $media-breakpoint-lg-up) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-lg-down() {
+	@media screen and (max-width: $media-breakpoint-lg-down) {
+		@content;
+	}
+}
+
+/*
+ * Tablet in portrait orienation media queries
+ */
+
+@mixin media-breakpoint-md() {
+	@media screen and (min-width: $media-breakpoint-md-up) and (max-width: $media-breakpoint-md-down) and (min-height: 416px) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-md-up() {
+	@media screen and (min-width: $media-breakpoint-md-up) and (min-height: 416px) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-md-down() {
+	@media screen and (max-width: $media-breakpoint-md-down) {
+		@content;
+	}
+}
+
+/*
+ * Mobile phones in landscape orienation media queries
+ */
+
+@mixin media-breakpoint-sm() {
+	@media screen and (max-width: $media-breakpoint-md-down) and (max-height: 415px) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-sm-up() {
+	@media screen and (max-width: $media-breakpoint-md-down) and (max-height: 415px) and (orientation: landscape),
+		(min-width: $media-breakpoint-md-up) and (min-height: 416px) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-sm-down() {
+	@media screen and (max-width: $media-breakpoint-md-down) and (max-height: 415px) and (orientation: landscape),
+		(max-width: $media-breakpoint-sm-down) {
+		@content;
+	}
+}
+
+/*
+ * Mobile phones in portrait orienation media queries
+ */
+
+@mixin media-breakpoint-xs() {
+	@media screen and (max-width: $media-breakpoint-xs-down) and (orientation: portrait) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-xs-up() {
+	// xs+ is all screens
+	@content;
+}
+
+@mixin media-breakpoint-xs-down() {
+	@include media-breakpoint-xs() {
+		@content;
+	}
+}
+
+/**
+ * Retina display media query
+ *
+ * @example
+ *   .icon {
+ *     @include media-breakpoint-retina () {
+ *       // ...
+ *     }
+ *   }
+ */
+
+@mixin media-breakpoint-retina() {
+	@media screen and (-webkit-min-device-pixel-ratio: 2) {
+		@content;
+	}
+}

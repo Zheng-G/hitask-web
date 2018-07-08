@@ -1,0 +1,138 @@
+/**
+ * Default button size
+ *
+ * @markup
+ *   <a class="btn">Default button</a>
+ */
+
+/* stylelint-disable */
+
+.btn {
+	$sizes: (
+		xs:
+			(
+				'height': 40px,
+				'padding': 0 38px,
+				'border-radius': 100px,
+				/* to cover all button sizes 'font-size': 1.5rem */
+			),
+		md: ()
+	);
+
+	@include button-sizes($sizes);
+}
+
+/**
+ * Small button size modifier
+ *
+ * @markup
+ *     <a class="btn btn--sm">Small button</a>
+ */
+
+.btn--sm {
+	$sizes: (
+		xs: ('height': 36px, 'padding': 0 18px, 'font-size': 1.5rem),
+		md: ()
+	);
+
+	@include button-sizes($sizes);
+}
+
+.btn--sm-tab {
+	$sizes: (
+		xs: ('height': 36px, 'padding': 0 11px, 'font-size': 1.5rem),
+		md: ()
+	);
+
+	@include button-sizes($sizes);
+}
+
+/**
+ * Etra small button size modifier
+ *
+ * @markup
+ *     <a class="btn btn--xs">Small button</a>
+ */
+
+.btn--xs {
+	$sizes: (
+		xs: ('height': 30px, 'padding': 0 18px, 'font-size': 1.3rem),
+		md: ()
+	);
+
+	@include button-sizes($sizes);
+}
+.btn--xs-tab {
+	$sizes: (
+		xs: ('height': 30px, 'padding': 0 11px, 'font-size': 1.3rem),
+		md: ()
+	);
+
+	@include button-sizes($sizes);
+}
+
+/**
+ * Middle button size modifier
+ *
+ * @markup
+ *     <a class="btn btn--md">Middle button</a>
+ */
+
+.btn--md {
+	$sizes: (
+		xs: ('height': 40px, 'padding': 0 26px, 'font-size': 1.4rem),
+		lg: ('height': 50px, 'padding': 0 30px, 'font-size': 1.7rem)
+	);
+
+	@include button-sizes($sizes);
+}
+
+/**
+ * Large button size modifier
+ *
+ * @markup
+ *     <a class="btn btn--lg">Large button</a>
+ */
+
+.btn--lg {
+	$sizes: (
+		xs: ('height': 40px, 'padding': 0 26px, 'font-size': 1.4rem),
+		md: ('height': 60px, 'padding': 0 46px, 'font-size': 1.7rem)
+	);
+
+	small {
+		font-size: 1.2rem;
+		font-weight: 300;
+
+		@include media-breakpoint(md-up) {
+			font-size: 1.5rem;
+		}
+	}
+
+	@include button-sizes($sizes);
+
+	&--narrow {
+		$narrow: (
+			xs: ('padding': 0 10px),
+			md: ('padding': 0 19px)
+		);
+
+		@include button-sizes($narrow);
+	}
+}
+
+/**
+ * Header button size modifier
+ *
+ * @markup
+ *     <a class="btn btn--header">Header button</a>
+ */
+
+.btn--header {
+	$sizes: (
+		xs: ('height': 44px, 'padding': 0 22px, 'border-radius': 0, 'font-size': 1.4rem),
+		md: ('height': 36px, 'padding': 0 18px, 'border-radius': 36px, 'font-size': 1.5rem)
+	);
+
+	@include button-sizes($sizes);
+}

@@ -1,0 +1,22 @@
+$principal-size: 2rem;
+
+.principal {
+	display: flex;
+	align-items: center;
+	min-height: $principal-size;
+	cursor: pointer;
+
+	&:global(.disabled) {
+		cursor: default;
+	}
+}
+
+.userAvatar {
+	border-radius: 50%;
+	width: $principal-size;
+	height: $principal-size;
+}
+
+.label {
+	margin-left: 0.5rem;
+}

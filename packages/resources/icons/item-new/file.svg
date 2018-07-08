@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>new item/file</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-item/file" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="new-item-file" transform="translate(2.000000, 0.000000)" stroke="#7A8090">
+            <path d="M4.5,6 L4.5,10 C4.5,11.105 5.395,12 6.5,12 C7.605,12 8.5,11.105 8.5,10 L8.5,5 C8.5,2.791 6.709,1 4.5,1 C2.291,1 0.5,2.791 0.5,5 L0.5,10.5 C0.5,13.538 2.962,16 6,16 C9.038,16 11.5,13.538 11.5,10.5 L11.5,5" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+{
+  "name": "@hitask/webpack",
+  "version": "0.1.2",
+  "private": true,
+  "description": "Shared webpack modules for build",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.2.0",
+    "node-sass": "^4.8.3",
+    "react-svg-loader": "^2.1.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.3.0",
+    "webpack-bugsnag-plugin": "^0.1.4",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-dev-middleware": "^3.1.0",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-extract-translation-keys-plugin": "^3.0.0",
+    "webpack-hot-middleware": "^2.21.2",
+    "webpack-httpolyglot-server": "^0.3.0",
+    "webpack-merge": "^4.1.2",
+    "webpack-notifier": "^1.6.0",
+    "webpack-sentry-plugin": "^1.14.1"
+  }
+}

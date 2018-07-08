@@ -1,0 +1,52 @@
+@import 'imports';
+
+.selector {
+	display: flex;
+	width: $item-form-field-outter-width;
+}
+
+.option {
+	border-width: 0.1rem;
+	border-style: solid;
+	flex-grow: 1;
+	text-align: center;
+	line-height: $pt-input-height;
+	user-select: none;
+	cursor: pointer;
+
+	@include color-theme(0) {
+		border-color: $color-line;
+	}
+
+	border-right: none;
+
+	&:first-child {
+		border-top-left-radius: $pt-border-radius;
+		border-bottom-left-radius: $pt-border-radius;
+	}
+
+	&:last-child {
+		border-right-width: 0.1rem;
+		border-right-style: solid;
+		border-top-right-radius: $pt-border-radius;
+		border-bottom-right-radius: $pt-border-radius;
+
+		@include color-theme(0) {
+			border-right-color: $color-line;
+		}
+	}
+
+	> input {
+		display: none;
+	}
+
+	> span[class^='pt-icon'] {
+		margin-right: 0.7rem;
+	}
+}
+
+.activeOption {
+	@include color-theme(0) {
+		background-color: $color-background-white;
+	}
+}

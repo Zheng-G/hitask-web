@@ -1,0 +1,30 @@
+image: hitask/node-headless-chrome:8.9
+
+before_script:
+  - yarn set-test-workspace
+  - yarn install --pure-lockfile --non-interactive
+
+cache:
+  key: "$CI_COMMIT_REF_NAME-$CI_PROJECT_ID"
+  paths:
+    - node_modules/
+    - .yarn
+
+stages:
+  - test-unit
+
+# ------------------------------
+# Cross-project jobs
+# ------------------------------
+test:
+  stage: test-unit
+  only:
+    - develop
+    - master
+    - /^feature\/.*$/
+    - /^bugfix\/.*$/
+    - next
+  script:
+    - yarn test-all
+    - node_modules/.bin/codecov -t $COVERAGE_TOKEN
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/

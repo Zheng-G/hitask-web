@@ -1,0 +1,76 @@
+/**
+ * Move element outside the viewport while still allowing to interact
+ * using keyboard
+ *
+ * @markup
+ *   <select class="is-out-of-screen">...</select>
+ */
+
+.is-out-of-screen {
+	position: absolute;
+	left: -9000px;
+}
+
+/**
+ * Invisible overlay
+ */
+
+.overlay {
+	@extend %layout-position-overlay;
+
+	// Make invisible without preventing interaction
+	background: #ffffff;
+	opacity: 0;
+}
+
+/**
+ * Disable all animations
+ *
+ * @markup
+ *   <div class="disable-transitions">...</div>
+ */
+
+.disable-transitions * {
+	transition: none !important;
+}
+
+/**
+ * Don't break text
+ */
+
+.dont-break-out {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+}
+
+/**
+ * Hide element
+ */
+
+.hidden {
+	display: none !important;
+}
+
+/**
+ * Set width 100%
+ */
+.full-width {
+	width: 100%;
+}
+
+/**
+ * Keep height of parent container
+ */
+.full-height {
+	height: 100%;
+}
+
+/**
+ * Blur the content
+ */
+.blurred {
+	filter: blur(2px);
+}

@@ -1,0 +1,7 @@
+@import 'imports';
+
+.selector {
+	> :global(.pt-popover-target) {
+		width: $item-form-field-innder-width;
+	}
+}

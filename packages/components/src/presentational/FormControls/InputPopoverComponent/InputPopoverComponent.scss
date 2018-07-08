@@ -1,0 +1,23 @@
+@import 'imports';
+
+.group {
+	align-items: stretch;
+
+	> :global(.pt-popover-target) {
+		flex: 1 1 99%;
+
+		> div {
+			border-radius: inherit;
+		}
+	}
+
+	> :global(.pt-button) {
+		flex: 1 1 1%;
+	}
+}
+
+:global(.pt-select-popover).popover {
+	:global(.pt-menu) {
+		max-height: $pt-input-height * 6.5;
+	}
+}

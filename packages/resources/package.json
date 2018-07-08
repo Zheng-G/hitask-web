@@ -1,0 +1,13 @@
+{
+  "name": "@hitask/resources",
+  "version": "0.1.7",
+  "private": true,
+  "description": "Hitask shared static resources",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED"
+}

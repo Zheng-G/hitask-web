@@ -1,0 +1,149 @@
+@import 'imports';
+
+$form-side-offset: 3.2rem;
+$form-vertical-offset: 2.4rem;
+$row-horizontal-margin: 1rem;
+$row-vertical-offset: 16px;
+$row-line-height: $pt-input-height;
+
+.form {
+	padding: 0 $form-side-offset;
+}
+
+.body,
+.scrollCont {
+	margin: 0 (-$form-side-offset);
+	padding: $form-vertical-offset $form-side-offset;
+}
+
+.fixedHeight {
+	padding-bottom: $row-vertical-offset + $row-line-height + $row-vertical-offset;
+	height: 100%;
+
+	.scrollCont {
+		height: 100%;
+		overflow: auto;
+	}
+
+	.actionsBar {
+		@extend %layout-order-top;
+
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+.header {
+	text-align: center;
+	margin-left: -$form-side-offset;
+	margin-right: -$form-side-offset;
+	padding: $row-vertical-offset $form-side-offset;
+}
+
+.row {
+	position: relative;
+	margin-bottom: $row-vertical-offset;
+	min-height: $row-line-height;
+	display: flex;
+	align-items: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&::after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+
+	:global(.pt-control) {
+		display: inline-block;
+		margin-bottom: 0;
+		line-height: $row-line-height;
+		user-select: none;
+
+		:global(.pt-control-indicator),
+		input[type='checkbox'],
+		input[type='radio'] {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	:global(.pt-label) {
+		margin-bottom: 0;
+	}
+
+	&.alignStart {
+		align-items: flex-start;
+
+		.rowLabel {
+			margin-top: 0.5rem;
+		}
+	}
+
+	&.iconLabeled {
+		.rowLabel {
+			width: 2rem + $row-horizontal-margin;
+			text-align: center;
+		}
+
+		.rowContent {
+			width: auto;
+		}
+	}
+}
+
+.rowLabel {
+	width: 30%;
+	padding-right: $row-horizontal-margin;
+	min-height: 0.1rem;
+	text-align: right;
+	color: $hi-gray1;
+
+	@include media-breakpoint(sm-down) {
+		width: 18%;
+	}
+}
+
+.rowContent {
+	width: 70%;
+	display: flex;
+	min-height: 0.1rem;
+
+	@include media-breakpoint(sm-down) {
+		width: 82%;
+	}
+}
+
+.actionsBar {
+	text-align: center;
+	border-top-width: 0.1rem;
+	border-top-style: solid;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+	margin-left: -$form-side-offset;
+	margin-right: -$form-side-offset;
+	padding: $row-vertical-offset $form-side-offset;
+
+	@include color-theme(0) {
+		border-top-color: $color-line-gray;
+		background: $hi-light-gray7;
+	}
+
+	:global(.pt-button) {
+		margin: 0 1rem;
+	}
+}
+
+.actionBtn {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	min-width: 9rem;
+}
+
+.hr {
+	margin: 0 0 $row-vertical-offset;
+}

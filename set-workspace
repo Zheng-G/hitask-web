@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+
+/* eslint no-console:0 */
+const fs = require('fs');
+
+const workspace = process.env.WORKSPACE || 'dev';
+
+const options = ['dev', 'test', 'webapp', 'ext-app', 'ext-calendar', 'desktop'];
+
+if (!options.includes(workspace)) {
+	console.log('Passed WORKSPACE param is incorrect!');
+	console.log(`Workspace can be one of: ${options.join(', ')}`);
+	process.exit(1);
+}
+
+const devWorkspace = ['packages/*'];
+const testWorkspace = [
+	'packages/babel',
+	'packages/test',
+	'packages/resources',
+	'packages/styles',
+	'packages/constants',
+	'packages/utils',
+	'packages/modules',
+	'packages/components',
+];
+const projectWorkspace = testWorkspace.concat([
+	'packages/locales',
+	'packages/webpack',
+	'packages/build',
+]);
+const webappWorkspace = projectWorkspace.concat(['packages/webapp']);
+const extAppWorkspace = projectWorkspace.concat(['packages/ext-build', 'packages/ext-app']);
+const extCalendarWorkspace = projectWorkspace.concat([
+	'packages/ext-build',
+	'packages/ext-calendar',
+]);
+const desktopWorkspace = projectWorkspace.concat(['packages/desktop']);
+const workspacesMap = {
+	dev: devWorkspace,
+	test: testWorkspace,
+	webapp: webappWorkspace,
+	'ext-app': extAppWorkspace,
+	'ext-calendar': extCalendarWorkspace,
+	desktop: desktopWorkspace,
+};
+
+const packageFile = require('./package.json');
+
+packageFile.workspaces = workspacesMap[workspace];
+
+const packageFileStr = JSON.stringify(packageFile, null, 2);
+fs.writeFileSync('./package.json', packageFileStr, 'utf8');
+fs.appendFileSync('./package.json', '\n');
+console.log(`Workspace set ot '${workspace}'`);
+
+// if (['webapp', 'ext-app', 'ext-calendar'].includes(workspace)) {
+// 	// Remove yarn.lock for CI-build projects since it is actual only for development workspace
+// 	// yarn.lock mast be share with cache between CI jobs
+// 	fs.unlinkSync('./yarn.lock');
+// 	console.log('yarn.lock file was removed');
+// }

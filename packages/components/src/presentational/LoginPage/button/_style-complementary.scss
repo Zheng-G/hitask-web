@@ -1,0 +1,24 @@
+/**
+ * Complementary button style modifier
+ *
+ * @markup
+ *   <a class="btn btn--complementary">Call to action button style</a>
+ */
+
+/* stylelint-disable */
+
+.btn--complementary {
+	border: 0.1rem solid;
+
+	$styles: (
+		'default': (color: $color-complementary, border: $color-complementary-light),
+		'hover':
+			(
+				color: $color-background,
+				border: $color-complementary,
+				background: $color-complementary
+			)
+	);
+
+	@include button-colors($styles);
+}

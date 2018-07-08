@@ -1,0 +1,17 @@
+/**
+ * Form control
+ */
+
+.formControl {
+	@extend %input;
+
+	&[type='password'] {
+		background-image: url(#{$path-icons}/password.png);
+		background-repeat: no-repeat;
+		background-position: right 1.5rem top 50%;
+	}
+
+	&[type='radio'] {
+		display: none;
+	}
+}

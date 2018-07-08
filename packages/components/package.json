@@ -1,0 +1,52 @@
+{
+  "name": "@hitask/components",
+  "version": "0.1.56",
+  "private": true,
+  "description": "Reusable React presentational and container components",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "npm-run-all -p lint:eslint lint:stylelint",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint -s scss \"src/**/*.scss\""
+  },
+  "dependencies": {
+    "@hitask/blueprint-datetime": "^1.25.11",
+    "@hitask/blueprint-labs": "^0.14.12",
+    "@hitask/blueprint-table": "^1.31.10",
+    "@hitask/modules": "^0.1.52",
+    "@hitask/react-big-calendar": "^0.17.0",
+    "@hitask/resources": "^0.1.7",
+    "@hitask/styles": "^0.1.19",
+    "bugsnag-react": "^1.0.1",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.5",
+    "moment": "^2.19.1",
+    "moment-timezone": "^0.5.13",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dnd": "^2.6.0",
+    "react-dnd-html5-backend": "^2.6.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "react-redux-i18n": "^1.9.2",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "react-scroll": "^1.7.7",
+    "redbox-react": "^1.5.0",
+    "redux-form": "^7.3.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "@hitask/test": "^0.1.2",
+    "@storybook/addon-actions": "v4.0.0-alpha.1",
+    "@storybook/react": "v4.0.0-alpha.1"
+  }
+}

@@ -1,0 +1,102 @@
+@import 'imports';
+
+$container-min-height: 4.4rem;
+$container-padding: 0.4rem;
+
+.unit {
+	position: relative;
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: column;
+	min-height: $container-min-height;
+	margin-bottom: 0.6rem;
+	padding: $container-padding;
+	border: 0.1rem solid transparent;
+	border-radius: $pt-border-radius;
+	transition: border-color $pt-transition-duration $pt-transition-ease;
+
+	&.isEvent {
+		.unitText {
+			position: relative;
+			color: $hi-dark-gray4;
+			padding-left: 0.8rem;
+			line-height: 1.67em;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.avatar {
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: 50%;
+	margin-right: 0.8rem;
+}
+
+.content {
+	flex-grow: 2;
+	display: flex;
+	max-width: 100%;
+}
+
+.topRow {
+	display: flex;
+	padding-top: 0.3rem;
+	align-items: baseline;
+}
+
+.userName {
+	flex-grow: 2;
+	color: $hi-gray12;
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+.timeCreate {
+	display: flex;
+	align-items: center;
+	margin-left: 1.6rem;
+	opacity: 0.7;
+	transition: opacity $pt-transition-duration $pt-transition-ease;
+	font-size: 1.3rem;
+	font-weight: 400;
+	line-height: 1.38em;
+	color: $hi-gray3;
+}
+
+.commentText {
+	margin-top: 0.8rem;
+	max-width: 100%;
+	color: $hi-black3;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+}
+
+.historyText {
+	margin-top: 0.2rem;
+	margin-left: 3.2rem;
+	max-width: 100%;
+	font-size: 1.2em;
+	line-height: 1.67em;
+	color: $hi-dark-gray4;
+	display: flex;
+	white-space: pre-line;
+	text-transform: capitalize;
+}
+
+:global(.pt-button).deleteButton {
+	position: absolute;
+	top: $container-padding + 0.2rem;
+	right: $container-padding + 0.2rem;
+	opacity: 0;
+	transition: opacity $pt-transition-duration $pt-transition-ease;
+	min-width: 3rem;
+	min-height: 3rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+
+	&::before {
+		font-size: 2rem;
+	}
+}

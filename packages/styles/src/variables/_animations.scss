@@ -1,0 +1,93 @@
+/**
+ * Animation & transition options
+ *
+ * @param {String} $easing-in               Easing function for elements, which disappear
+ * @param {String} $easing-out              Easing function for elements, which appear
+ * @param {String} $easing-in-out           Easing function for elements, which move
+ * @param {String} $easing-in-subtle        Subtle easing function for elements, which disappear
+ * @param {String} $easing-out-subtle       Subtle easing function for elements, which appear
+ * @param {String} $easing-in-out-subtle    Subtle easing function for elements, which move
+ *
+ * @param {time} $duration-normal           Default animation duration
+ * @param {time} $duration-fast             Small element animation duration
+ * @param {time} $duration-slow             Large element animation duration
+ */
+
+$easing-in: cubic-bezier(0.25, 0.74, 0.22, 0.99); // http://cubic-bezier.com/#.25,.74,.22,.99
+$easing-out: cubic-bezier(0.47, 0.04, 0.5, -0.06); // http://cubic-bezier.com/#.47,.04,.5,-.06
+$easing-in-out: cubic-bezier(0.55, 0, 0.1, 1); // http://cubic-bezier.com/#.55,0,.1,1
+
+$easing-in-subtle: cubic-bezier(0.29, 0.73, 0.45, 1); // http://cubic-bezier.com/#.29,.73,.45,1
+$easing-out-subtle: cubic-bezier(
+	0.42,
+	0.13,
+	0.81,
+	0.47
+); // http://cubic-bezier.com/#.42,.13,.81,.47
+$easing-in-out-subtle: ease;
+
+$easing-out-elastic: cubic-bezier(
+	0.44,
+	1.81,
+	0.42,
+	0.9
+); // http://cubic-bezier.com/#.38,1.35,.54,.95
+
+$duration-normal: 0.4s;
+$duration-fast: $duration-normal / 2;
+$duration-slow: $duration-normal * 2;
+
+/**
+ * @file Animation easings based on Google Material
+ * @see https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
+ */
+
+/**
+ * Standard curve
+ *
+ * This is the most common easing curve. Objects quickly accelerate and slowly
+ * decelerate between on-screen locations. It applies to growing and shrinking
+ * material, among other property changes.
+ */
+
+$easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+/**
+ * Deceleration curve (“Easing out”)
+ *
+ * Objects enter the screen at full velocity from off-screen and slowly
+ * decelerate to a resting point.
+ *
+ * During deceleration, objects may scale up either in size (to 100%) or opacity
+ * (to 100%). In some cases, when objects enter the screen at 0% opacity, they
+ * may slightly shrink from a larger size upon entry.
+ */
+
+$easing-out: cubic-bezier(0, 0, 0.2, 1);
+
+/**
+ * Acceleration curve (“Easing in”)
+ *
+ * Objects leave the screen at full velocity. They do not decelerate when
+ * off-screen.
+ *
+ * They accelerate at the beginning of the animation and may scale down in
+ * either size (to 0%) or opacity (to 0%). In some cases, when objects leave
+ * the screen at 0% opacity, they may also slightly scale up or down in size.
+ */
+
+$easing-in: cubic-bezier(0.4, 0, 1, 1);
+
+/**
+ * The sharp curve is used by objects that may return to the screen at any time.
+ *
+ * Objects may quickly accelerate from a starting point on-screen, then quickly
+ * decelerate in a symmetrical curve to a resting point immediately off-screen.
+ * The deceleration is faster than the standard curve since it doesn't follow an
+ * exact path to the off-screen point. Objects may return from that point at any
+ * time.
+ *
+ * Used for example for hamburger menu
+ */
+
+$easing-sharp: cubic-bezier(0.4, 0, 0.6, 1);

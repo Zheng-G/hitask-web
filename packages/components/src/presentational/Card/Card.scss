@@ -1,0 +1,35 @@
+@import 'imports';
+
+.card {
+	@include color-theme(0) {
+		background: $color-background-silver;
+	}
+
+	> :global(.pt-card-header) {
+		text-align: center;
+		border-top-left-radius: $pt-border-radius;
+		border-top-right-radius: $pt-border-radius;
+
+		> :global(h1),
+		> :global(h2),
+		> :global(h3),
+		> :global(h4),
+		> :global(h5),
+		> :global(h6) {
+			margin-bottom: 0;
+		}
+	}
+
+	> :global(.pt-card-footer) {
+		text-align: center;
+		border-top-width: 0.1rem;
+		border-top-style: solid;
+		border-bottom-left-radius: $pt-border-radius;
+		border-bottom-right-radius: $pt-border-radius;
+
+		@include color-theme(0) {
+			background: $hi-light-gray7;
+			border-top-color: $color-line-gray;
+		}
+	}
+}

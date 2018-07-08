@@ -1,0 +1,55 @@
+/**
+ * Link decoration placeholder classname generator
+ *
+ * For each link decoration defined in variables/_links.scss creates
+ * a %link--decoration-NAME placeholder classname
+ *
+ * @see variables/_links.scss
+ * @example
+ *   a     { @extend %link--decoration-default; }
+ *   nav a { @extend %link--decoration-none; }
+ */
+
+@each $name, $link-decoration in $link-decorations {
+	%link--decoration-#{$name} {
+		@include link-normal() {
+			text-decoration: map-get($link-decoration, normal);
+		}
+
+		@include link-hover() {
+			text-decoration: map-get($link-decoration, hover);
+		}
+
+		@include link-active() {
+			text-decoration: map-get($link-decoration, active);
+		}
+	}
+}
+
+/**
+ * Link style placeholder classname generator
+ *
+ * For each link theme defined in variables/_colors.scss creates
+ * a %link--style-NAME placeholder classname
+ *
+ * @see variables/_colors.scss
+ * @example
+ *   a     { @extend %link--style-default; }
+ *   nav a { @extend %link--style-text; }
+ */
+
+@each $name, $link-style in $link-styles {
+	%link--style-#{$name} {
+		@include link-normal() {
+			color: map-get($link-style, normal);
+		}
+
+		@include link-hover() {
+			color: map-get($link-style, hover);
+		}
+
+		@include link-active() {
+			color: map-get($link-style, active);
+		}
+	}
+}

@@ -1,0 +1,6 @@
+<svg class="icon-project-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="nonzero">
+        <path class="icon-project-open--bottom" fill="#779FBD" d="M15.791 6.965c-.2-.189-.5-.377-.8-.377H3.996c-.4 0-.8.188-.9.565L.099 13.74c-.2.565 0 1.318.9 1.318h10.995c.4 0 .8-.188.9-.565l2.998-6.588c.2-.282.1-.659-.1-.941z"/>
+        <path fill="#91A9BB" d="M1.2 6.4C1.7 5.365 2.8 4.706 4 4.706h9V2.824c0-.565-.4-.942-1-.942H6.4L4.7.282A.935.935 0 0 0 4 0H1C.4 0 0 .376 0 .941V9.13L1.2 6.4z"/>
+    </g>
+</svg>

@@ -1,0 +1,176 @@
+/**
+ * Dark color theme
+ */
+
+.ui-dark {
+	// Inverted color
+	color: $color-text-inverted;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	%text--heading {
+		color: $color-heading-inverted;
+	}
+}
+
+/**
+ * Text colors
+ *
+ * @markup
+ *   <p class="text--color-heading">Heading color</p>
+ */
+
+.text--color-heading {
+	color: $color-heading;
+
+	.ui-dark & {
+		color: $color-heading-inverted;
+	}
+}
+
+.text--color-light {
+	color: $color-text-light;
+}
+
+.text--color-complementary {
+	color: $color-complementary;
+}
+
+.text--color-error {
+	color: $color-error;
+}
+
+/**
+ * Text alignment
+ *
+ * @markup
+ *   <p class="text--left">Left aligned text</p>
+ *   <p class="text--center">Center aligned text</p>
+ *   <p class="text--right">Right aligned text</p>
+ */
+
+.text--left {
+	text-align: left;
+}
+
+.text--right {
+	text-align: right;
+}
+
+.text--center {
+	text-align: center;
+}
+
+/**
+ * Capitalize text
+ *
+ * @markup
+ *   <p class="text--capitalize">Lorem ipsum dolor sit amet</p>
+ */
+
+.text--capitalize {
+	text-transform: uppercase !important;
+}
+
+/**
+ * Prevent text wrapping
+ *
+ * @markup
+ *   <p class="text--nowrap">
+ *     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+ *     pharetra sed erat convallis suscipit. Vestibulum at interdum neque.
+ *   </p>
+ */
+
+.text--nowrap {
+	white-space: nowrap !important;
+}
+
+/**
+ * Truncate text adding dots at the end of the line if needed
+ *
+ * @markup
+ *   <p class="text--truncate">
+ *     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+ *     pharetra sed erat convallis suscipit. Vestibulum at interdum neque.
+ *   </p>
+ */
+
+.text--truncate {
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+}
+
+/**
+ * Heading styles for elements
+ *
+ * @markup
+ *   <h2 class="h1">Looks like first level heading</h2>
+ */
+
+.h1 {
+	@extend h1;
+}
+
+.h2 {
+	@extend h2;
+}
+
+.h3 {
+	@extend h3;
+}
+
+.h4 {
+	@extend h4;
+}
+
+.h5 {
+	@extend h5;
+}
+
+/**
+ * Text styles for elements
+ *
+ * @markup
+ *   <p class="text--lead">Lead intro text</p>
+ *   <p class="text--lead-lg">Extra large lead intro text</p>
+ */
+
+.text--lead {
+	@extend %text--size-lead;
+}
+
+.text--lead-lg {
+	@extend %text--size-lead-lg;
+}
+
+/**
+ * Heading font family
+ *
+ * @markup
+ *   <p class="text--heading">I look similar to heading</p>
+ */
+
+.text--heading {
+	@extend %text--heading;
+}
+
+/**
+ * Font size styles for elements
+ *
+ * @markup
+ *   <p class="text--small">Small text size</p>
+ *   <p><small>Small text size</small></p>
+ */
+
+.text--small {
+	@extend %text--size-small;
+}
+
+.text--semibold {
+	font-weight: 400;
+}

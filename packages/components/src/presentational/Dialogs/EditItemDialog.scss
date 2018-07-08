@@ -1,0 +1,20 @@
+@import 'imports';
+
+:global(.pt-dialog).dialog {
+	width: 70rem;
+	max-width: 95%;
+	margin: 0;
+	padding-bottom: 0;
+
+	@include color-theme(0) {
+		background: $color-background;
+	}
+
+	> :global(.pt-dialog-body) {
+		margin: 0;
+		height: 55rem;
+		max-height: 90vh;
+		position: relative;
+		overflow: auto;
+	}
+}

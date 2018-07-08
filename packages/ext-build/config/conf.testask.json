@@ -1,0 +1,5 @@
+{
+	"API_SOURCE": "testask",
+	"PLAY_APP_BASE_URL": "https://testask.com",
+	"NODE_APP_BASE_URL": "https://app.testask.com"
+}

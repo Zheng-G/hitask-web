@@ -1,0 +1,186 @@
+/*
+ * Button normal state style mixin
+ *
+ * Sets styles to button normal state
+ * 1. We overwrite disabled state too because if classname is used, then :hover, :active will take precedent
+ */
+
+@mixin button-normal() {
+	&,
+	&.is-disabled, // 1.
+	&:disabled,
+	&[disabled] {
+		@content;
+	}
+}
+
+/*
+ * Button hover state style mixin
+ *
+ * Sets styles to button hover, focused states
+ */
+
+@mixin button-hover() {
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+/*
+ * Button active state style mixin
+ *
+ * Sets styles to active state
+ */
+
+@mixin button-active() {
+	&:active,
+	&.is-active {
+		@content;
+	}
+}
+
+/*
+ * Button hover + active state style mixin
+ *
+ * Sets styles to button active, hover, focused states
+ */
+
+@mixin button-hover-active() {
+	&:hover,
+	&:focus,
+	&:active,
+	&.is-active {
+		@content;
+	}
+}
+
+/*
+ * Button disabled state style mixin
+ */
+
+@mixin button-disabled() {
+	&.is-disabled,
+	&:disabled,
+	&[disabled] {
+		@content;
+	}
+}
+
+/*
+ * Button style
+ *
+ * Sets hover, active, focus, disabled styles
+ */
+
+@mixin button-colors($styles) {
+	$default: map-get($styles, default);
+	$hover: map-get($styles, hover);
+	$active: map-get($styles, active);
+	$disabled: map-get($styles, disabled);
+
+	// Hover / Active states
+	@if type-of($hover) == 'map' and $active == null {
+		// Hover + active from $hover
+		@include button-hover-active() {
+			@include button-color-variant($hover);
+		}
+	} @else if type-of($active) == 'map' and $hover == null {
+		// Hover + active from $active
+		@include button-hover-active() {
+			@include button-color-variant($active);
+		}
+	} @else {
+		// Hover
+		@if type-of($hover) == 'map' {
+			@include button-hover() {
+				@include button-color-variant($hover);
+			}
+		}
+
+		// Active
+		@if type-of($active) == 'map' {
+			@include button-active() {
+				@include button-color-variant($active);
+			}
+		}
+	}
+
+	// Normal / Default state
+	@if type-of($default) == 'map' {
+		@include button-normal() {
+			@include button-color-variant($default);
+		}
+
+		// If icon is not transparent, then its is not 'currentColor' and won't be
+		// animated automatically
+		$icon: map-get($default, icon);
+
+		@if type-of($icon) == 'color' and $icon != transparent {
+			.icon {
+				@extend %transition;
+			}
+		}
+	}
+
+	// Disabled state
+	@if type-of($disabled) == 'map' {
+		@include button-disabled() {
+			@include button-color-variant($disabled);
+		}
+	}
+
+	// While button is loading hide text/icon
+	&.loading {
+		color: transparent !important;
+	}
+}
+
+@mixin button-color-variant($colors) {
+	$color: map-get($colors, color);
+	$icon: map-get($colors, icon);
+	$background: map-get($colors, background);
+	$border: map-get($colors, border);
+	$border-smooth: map-get($colors, border-smooth);
+
+	@if type-of($color) == 'color' and $color != transparent {
+		color: $color;
+	}
+
+	@if type-of($icon) == 'color' and $icon != transparent {
+		// SVG icons
+		.icon {
+			fill: $icon;
+		}
+
+		.icon--stroke {
+			fill: transparent;
+			stroke: $icon;
+		}
+	}
+
+	@if type-of($background) == 'color' {
+		background-color: $background;
+	}
+
+	@if type-of($border) == 'color' {
+		border-color: $border;
+	}
+
+	// All other properties
+	@each $name, $value in $colors {
+		@if $name != 'color' and $name != 'icon' and $name != 'background' and $name != 'border' {
+			#{$name}: $value;
+		}
+	}
+
+	// Smoother border, should be used only for round buttons with border and
+	// without background
+	@if ($border-smooth) {
+		@if ($border != transparent) {
+			box-shadow: 0 0 0.5px 0 $border, 0 0 0.5px 0 $border inset;
+		} @else {
+			box-shadow: none;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+/**
+ * Horizontal ruler
+ *
+ * @param {Number} $hr-spacer-multiplier Multiplier for HR margins
+ * @markup
+ *   <hr />
+ */
+
+hr {
+	border: 0;
+	border-bottom: 1px solid $color-line;
+
+	@include margins($spacer-y, $multiplier: 2.5);
+}

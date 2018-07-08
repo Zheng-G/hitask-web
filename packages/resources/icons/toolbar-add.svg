@@ -1,0 +1,7 @@
+<svg class="icon-toolbar-add" height="26" viewBox="0 0 26 26" width="26" 
+	xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd">
+		<path class="icon-toolbar-add--bg" d="m13 0c-7.17826087 0-13 5.82173913-13 13 0 7.1782609 5.82173913 13 13 13 7.1782609 0 13-5.8217391 13-13 0-7.17826087-5.8217391-13-13-13z" fill="#03d2c2" fill-rule="nonzero"/>
+		<path d="m19 14h-5v5h-2v-5h-5v-2h5v-5h2v5h5z" fill="#fff"/>
+	</g>
+</svg>

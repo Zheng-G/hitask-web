@@ -1,0 +1,23 @@
+{
+  "name": "@hitask/locales",
+  "version": "0.1.18",
+  "private": true,
+  "description": "Shared translations",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "compile-locales": "node ./utils/jv2js-translate compile -s ./src -d ./dist"
+  },
+  "dependencies": {
+    "colors": "^1.2.1",
+    "glob": "^7.1.1",
+    "lodash": "^4.17.5",
+    "properties-parser": "^0.3.1",
+    "yargs": "^11.0.0"
+  }
+}

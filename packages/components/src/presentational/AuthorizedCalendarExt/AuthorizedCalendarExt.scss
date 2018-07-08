@@ -1,0 +1,14 @@
+@import 'imports';
+
+.authorizedCalendar {
+	position: relative;
+	height: 100%;
+
+	@include color-theme(0) {
+		background: $color-background;
+	}
+}
+
+.hasNavbar {
+	padding-top: 5rem;
+}

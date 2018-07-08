@@ -1,0 +1,15 @@
+/**
+ * Call to action button style modifier
+ *
+ * @markup
+ *   <a class="btn btn--primary">Call to action button style</a>
+ */
+
+.btn--primary {
+	$styles: (
+		'default': (color: $color-background, background: $color-primary),
+		'hover': (color: $color-background, background: darken($color-primary, 15%))
+	);
+
+	@include button-colors($styles);
+}

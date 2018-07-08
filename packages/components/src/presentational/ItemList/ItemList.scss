@@ -1,0 +1,28 @@
+@import 'imports';
+
+$side-offset: 3.2rem;
+$bottom-offset: 1rem;
+$top-offset: 0.8rem;
+
+.outterContainer {
+	height: 100%;
+	overflow: auto;
+	margin-left: -$side-offset;
+	margin-right: -$side-offset;
+	padding: $top-offset $side-offset $bottom-offset;
+}
+
+.innerContainer {
+	margin-right: calc(100% + 6.4rem - 100vw);
+}
+
+.btnContainer {
+	text-align: center;
+	padding: 1rem 0;
+	border-bottom-width: 0.1rem;
+	border-bottom-style: solid;
+
+	@include color-theme(0) {
+		border-bottom-color: $color-line-light;
+	}
+}

@@ -1,0 +1,17 @@
+/**
+ * Button modifier for slightly rounded corners
+ *
+ * @markup
+ *   <a class="btn btn--rounded">
+ *     Call to action<br />Button style
+ *   </a>
+ */
+
+.btn--rounded {
+	border-radius: 0.4rem;
+
+	&.btn--md,
+	&.btn--lg {
+		border-radius: 0.7rem;
+	}
+}

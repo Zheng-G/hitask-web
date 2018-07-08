@@ -1,0 +1,51 @@
+/*
+ * Default link
+ *
+ * @markup
+ *   <a>Standard link</a>
+ */
+
+a {
+	@extend %link--decoration-default;
+	@extend %link--style-default;
+}
+
+.ui-dark a:not(.btn) {
+	@extend %link--style-inverted;
+}
+
+/**
+ * Cursors
+ * Link animations
+ * Focused state
+ */
+
+a,
+button,
+input[type='submit'] {
+	cursor: pointer;
+
+	@extend %transition;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/**
+ * Disabled state
+ *
+ * @markup
+ *   <a class="is-disabled">Disabled state</a>
+ */
+
+.is-disabled,
+:disabled,
+[disabled] {
+	pointer-events: none;
+}

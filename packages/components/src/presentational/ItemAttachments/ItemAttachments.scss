@@ -1,0 +1,10 @@
+@import '../Item/Item';
+
+.propRow {
+	@include item-properties-row;
+
+	align-items: flex-start;
+	flex-direction: column;
+	padding-top: 0;
+	padding-bottom: 0;
+}

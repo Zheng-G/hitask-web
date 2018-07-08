@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>new item/event</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-item/event" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="new-item-event" stroke="#7A8090">
+            <path d="M0.5,5.5 L15.5,5.5" id="Shape"></path>
+            <path d="M15.5,5.5 L15.5,3.5 C15.5,2.94771525 15.0522847,2.5 14.5,2.5 L1.5,2.5 C0.94771525,2.5 0.5,2.94771525 0.5,3.5 L0.5,14.5 C0.5,15.0522847 0.94771525,15.5 1.5,15.5 L6.5,15.5" id="Shape"></path>
+            <path d="M4.5,0.5 L4.5,2.5" id="Shape"></path>
+            <path d="M11.5,0.5 L11.5,2.5" id="Shape"></path>
+            <circle id="Oval" cx="11.5" cy="11.5" r="4"></circle>
+            <path d="M11.5,9.5 L11.5,13.5" id="Shape"></path>
+            <path d="M9.5,11.5 L13.5,11.5" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+/*
+* SVG images interactions
+*/
+
+/*
+* icon-toolbar-add styles
+*/
+svg.icon-toolbar-add {
+	cursor: pointer;
+	user-select: none;
+}
+
+svg.icon-toolbar-add:hover path.icon-toolbar-add--bg {
+	fill: $hi-green1;
+}
+
+svg.icon-toolbar-add:active path.icon-toolbar-add--bg {
+	fill: $hi-green2;
+	transition: none;
+	transform-origin: 13px 13px;
+	transform: scale(0.9);
+}
+
+/*
+* icon-toolbar-add styles
+*/
+svg.icon-item-list-task {
+	cursor: pointer;
+	user-select: none;
+
+	:hover path,
+	:hover polyline {
+		visibility: visible;
+		stroke: #dde2e6;
+	}
+
+	:hover rect {
+		stroke: #575c66;
+	}
+
+	:active path,
+	:active rect,
+	:active polyline {
+		visibility: visible;
+		stroke: #575c66;
+	}
+}

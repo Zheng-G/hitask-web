@@ -1,0 +1,21 @@
+{
+  "name": "@hitask/build",
+  "version": "0.1.3",
+  "private": true,
+  "description": "Shared build configs",
+  "main": "index.js",
+  "author": "Human Computer LLC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hitask/hitask-web.git"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@hitask/babel": "^0.1.2",
+    "@hitask/webpack": "^0.1.2",
+    "debug": "^3.1.0",
+    "dotenv": "^5.0.1",
+    "lodash": "^4.17.5",
+    "shelljs": "^0.8.1"
+  }
+}

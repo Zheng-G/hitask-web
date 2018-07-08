@@ -1,0 +1,83 @@
+@import 'imports';
+
+$side-offset: 3.2rem;
+$toolbar-color: $hi-gray11;
+$toolbar-height: 3.2rem;
+
+.toolbar {
+	display: flex;
+	align-items: center;
+	border-width: 0.1rem;
+	border-style: solid;
+	border-radius: $pt-border-radius;
+
+	@include color-theme(0) {
+		background: $hi-white7;
+		color: $toolbar-color;
+		border-color: $color-line-light;
+	}
+
+	width: 100%;
+	transition: margin-top $central-header-animation-duration $central-header-animation-ease;
+
+	&.collapsedHeader {
+		margin-top: -$toolbar-height;
+	}
+
+	:global(.pt-menu) {
+		background: transparent;
+	}
+
+	:global(.pt-menu-item),
+	:global(.pt-menu-item::before),
+	:global(.pt-menu-item::after),
+	:global(.pt-icon-standard),
+	:global(.pt-button) {
+		color: $toolbar-color !important;
+	}
+
+	:global(.pt-menu-item) {
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+	}
+}
+
+.orderMenu:global(.pt-menu) {
+	padding: 0;
+	min-width: auto;
+}
+
+.orderMenuPopover {
+	:global(.pt-menu) {
+		min-width: 14rem;
+	}
+}
+
+.orderMenuItem {
+	padding-right: 0.7rem !important;
+	border-top-left-radius: $pt-border-radius - 1px;
+	border-bottom-left-radius: $pt-border-radius - 1px;
+
+	&::after {
+		display: none; // remove caret-right from popover-target
+	}
+}
+
+.orderMenuSubitem {
+	padding-right: 2.3rem;
+
+	:global(.pt-menu-item-label) {
+		margin-right: -2rem;
+	}
+}
+
+.searchContainer {
+	flex-grow: 2;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+:global(.pt-button).searchBtn {
+	border-radius: 0;
+}

@@ -1,0 +1,12 @@
+{
+	"PRODUCT_NAME": "Hitask",
+	"APP_ID": "hitask.macos",
+	"API_SOURCE": "hitask",
+	"GA_ENABLED": true,
+	"GA_TRACK_ID": "UA-1572732-17",
+	"GAUTH_CLIENT_ID": "326771116683-jckqnchni367v1keeq8bv1pgpaebgrhl.apps.googleusercontent.com",
+	"INTERCOM_APP_ID": "af11bb3b356161188ab61a12a95d7a316fbd63dc",
+	"INTERCOM_ENABLED": true,
+	"PLAY_APP_BASE_URL": "https://hitask.com",
+	"NODE_APP_BASE_URL": "https://app.hitask.com"
+}

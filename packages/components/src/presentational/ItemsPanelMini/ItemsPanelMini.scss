@@ -1,0 +1,35 @@
+@import 'imports';
+
+$side-vert-offset: 16px;
+$side-horiz-offset: $side-vert-offset * 2;
+$item-form-header-height: $pt-input-height + (24px * 2) - 11px;
+
+.page {
+	height: 100%;
+	position: relative;
+
+	&.collapsedHeader {
+		.pageBody {
+			padding-top: 0;
+		}
+	}
+}
+
+.title {
+	padding: 1rem 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.formContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.pageBody {
+	padding: $item-form-header-height $side-horiz-offset 0;
+	height: 100%;
+	transition: padding-top $central-header-animation-duration $central-header-animation-ease;
+}
